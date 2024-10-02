@@ -1,6 +1,6 @@
 /**
  * Render Contact
- * 2023-2023
+ * 2023-2024
  * v 0.0.1
  * 
  * */
@@ -29,7 +29,7 @@ const style_titles = {
   maxWidth: 600,
 }
 const style_subtitles = {
-  color: "magenta",
+  color: "var(--color_text_subtitle)",
   marginTop: -24,
   marginLeft: 128,
   marginBottom: 42,

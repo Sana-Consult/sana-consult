@@ -9,8 +9,8 @@
 	--color_0: black;
 	--color_1: white;
 
-  --color_2: magenta;
-	--color_3: yellow;
+  --color_2: blue;
+	--color_3: white;
 	--color_4: cyan;
 	--color_5: darkmagenta;
 	--color_6: indigo;
@@ -21,7 +21,7 @@
 	--color_text_light: var(--color_3);
 
 	--color_text_title: var(--color_2);
-	--color_text_current: var(--color_5);
+	--color_text_current: var(--color_2);
 
 	--color_global: var(--color_3);
 

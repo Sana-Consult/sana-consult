@@ -1,7 +1,7 @@
 ---
 menu: "home"
 title: "Sanna Consult"
-subtitle: "Boutique Software Development"
+subtitle: "Consulting"
 categorie: "home"
 message: "A need"
 misc: "println(”Send your project to us”);"

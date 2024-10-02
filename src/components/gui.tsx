@@ -41,10 +41,9 @@ interface ButtonProps {
 ///////////////
 export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
   let button_style = {
-  // const button_style = {
-    color: "yellow",
+    color: "var(--color_global)",
     padding: 4,
-    background: "magenta",
+    background: "var(--color_2)",
     fontSize: "1.25rem",
     borderRadius: 4,
     cursor: "pointer",
