@@ -4,9 +4,11 @@ title: "Mentions Légales"
 categorie : "legal"
 lang: "fr"
 ---
-Sana Consult enregistré sous le numéro 84380914338. Cet enregistrement ne vaut pas agrément de l’État
+Sana Consult enregistré sous le numéro 84380914338. 
+/
+Cet enregistrement ne vaut pas agrément de l’État
 
-Factory : Sana Consult - adressse à compléter
+Société : Sana Consult - adressse à compléter
 
-Provider : Netlify & Github
+Fournisseur d'accès : Netlify & Github
 

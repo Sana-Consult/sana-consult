@@ -8,5 +8,5 @@
 export { RenderHome } from './render_home.tsx';
 export { RenderAbout } from "./render_about.tsx";
 export { RenderContact } from "./render_contact.tsx";
-// export { RenderTeam } from "./render_team.tsx";
+export { RenderLegal } from "./render_legal.tsx";
 export { RenderPage } from "./render_page.tsx";

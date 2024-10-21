@@ -1,8 +1,7 @@
 /**
- * Render Contact
- * 2023-2024
- * v 0.0.1
- * 
+ * Render Home
+ * 2024-2024
+ * v 0.0.2
  * */
 
 // REACT
@@ -12,10 +11,10 @@ import { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // APP
-import { useNode } from "../utils/hu.tsx";
+import { get_css_value, useNode } from "../utils/hu.tsx";
 import { ButtonCodeNav } from "../components/hc.tsx";
 import { RegionContext } from "./../context.tsx";
-import { get_css_value } from "../utils/hu.tsx";
+import { MarkdownHtml } from "../components/hc.tsx";
 
 // need to define properly the any... it's very too much and very lazy !
 interface Props {
@@ -28,15 +27,19 @@ const style_titles = {
   marginTop: 24,
   maxWidth: 600,
 }
+
 const style_subtitles = {
   color: "var(--color_text_subtitle)",
-  marginTop: -24,
-  marginLeft: 128,
-  marginBottom: 42,
+  marginLeft: 24,
 }
+
 const question_styles = {
   marginLeft: 24,
   marginBottom: -8,
+}
+
+const paragraph_styles = {
+  marginBottom: 48,
 }
 
 export const RenderHome: FC<Props> =() => {
@@ -53,6 +56,7 @@ export const RenderHome: FC<Props> =() => {
                 misc
                 lang
               }
+              html
             }
           }
         }
@@ -60,15 +64,18 @@ export const RenderHome: FC<Props> =() => {
     `
   )
   const { lang } = useContext(RegionContext);
-  const {frontmatter} = useNode(data, lang);
+  const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter;
 
   return <>
       <h1 style={style_titles}>{info.title}</h1>
-      <h2 style={style_subtitles}>{info.subtitle}</h2>
+      <h4 style={style_subtitles}>{info.subtitle}</h4>
       <h3 style={question_styles}>{info.message}</h3>
       <p>
         <ButtonCodeNav what={info.misc} to="/contact"/>
+      </p>
+      <p style={paragraph_styles}>
+        <MarkdownHtml html={html} />
       </p>
   </>
 }

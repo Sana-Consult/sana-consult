@@ -21,6 +21,7 @@
 	--color_text_light: var(--color_3);
 
 	--color_text_title: var(--color_2);
+	--color_text_subtitle: var(--color_2);
 	--color_text_current: var(--color_2);
 
 	--color_global: var(--color_3);
@@ -106,8 +107,12 @@ h2 {
 	font-size: 1.75em;
 }
 
-h3, h4, h5, h6 {
+h3 {
 	font-size: 1.5em;
+}
+
+h4, h5, h6 {
+	font-size: 1.25em;
 }
 
 

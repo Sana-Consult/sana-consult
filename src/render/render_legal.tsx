@@ -1,8 +1,7 @@
 /**
- * Render Contact
- * 2023-2023
+ * Render Legal
+ * 2024-2024
  * v 0.0.1
- * 
  * */
 
 // REACT
@@ -12,40 +11,36 @@ import { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // APP
-import { useNode } from "../utils/hu.tsx";
+import { get_css_value, useNode } from "../utils/hu.tsx";
+import { RegionContext } from "./../context.tsx";
 import { MarkdownHtml } from "../components/hc.tsx";
-import { RegionContext } from "./../context";
 
 // need to define properly the any... it's very too much and very lazy !
 interface Props {
   // data? : any;
 }
 
-
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 42,
-  maxWidth: 600,
-}
-
-const paragraphStyles = {
+const paragraph_styles = {
   marginBottom: 48,
 }
 
-export const RenderAbout: FC<Props> =() => {
+const title_styles = {
+  fontFamily: get_css_value("--font_title"),
+  color: "var(--color_text_title)",
+  marginTop: 24,
+  marginBottom: 24,
+  maxWidth: 600,
+}
+
+export const RenderLegal: FC<Props> =() => {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "about"}}}) {
+        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "legal"}}}) {
           edges {
             node {
               frontmatter {
-                categorie
                 title
-                subtitle
-                message
-                misc
-                menu
                 lang
               }
               html
@@ -57,12 +52,12 @@ export const RenderAbout: FC<Props> =() => {
   )
   const { lang } = useContext(RegionContext);
   const {frontmatter, html} = useNode(data, lang);
-  const info = frontmatter;
+  const info = frontmatter.title;
 
   return <>
-    <h2 style={headingStyles}>{info.subtitle}</h2>
-    <p style={paragraphStyles}>
-      <MarkdownHtml html={html} />
-    </p>
+      <h2 style={title_styles}>{info}</h2>
+      <p style={paragraph_styles}>
+        <MarkdownHtml html={html} />
+      </p>
   </>
 }
