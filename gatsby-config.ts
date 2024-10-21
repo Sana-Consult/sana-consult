@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `SanaConsult`,
+    title: `Sana Consult`,
     siteUrl: `https://www.yourdomain.tld`,
     version: `0.0.1`,
   },

@@ -27,7 +27,7 @@ Je peux également vous aider à sélectionner vos prestataires et vous accompag
 ## Pourquoi former vos collaborateurs ?
 Dans un environnement professionnel en constante évolution, attirer, fidéliser et motiver votre personnel est essentiel. 
 La formation permet à vos collaborateurs d’être plus performants dans leurs missions, de maîtriser les outils à leur disposition et de mieux comprendre les enjeux de leur travail, ce qui se traduit souvent par une amélioration de la productivité et, à terme, des résultats du cabinet.
-SanaConsult est un organisme de formation agréé enregistré sous le numéro 84380914338.  ( Cet enregistrement ne vaut pas agrément de l’Etat ) 
+Sana Consult est un organisme de formation agréé enregistré sous le numéro 84380914338.  ( Cet enregistrement ne vaut pas agrément de l’Etat ) 
 Certaines formations peuvent bénéficier d’une prise en charge partielle ou totale par l'OPCO-EP, comme le module « Secrétaires : Appréhender le monde ophtalmologique ». 
 D’autres, comme « Mise en place de procédure de recouvrement de vos impayés CPAM », ne sont pas éligibles à cette prise en charge.
 Des modules personnalisés sont également disponibles, contactez-nous pour plus de détails.

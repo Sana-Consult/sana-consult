@@ -38,4 +38,4 @@ const IndexPage: FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Olombelona Software</title>
+export const Head: HeadFC = () => <title>Sana Consult</title>
