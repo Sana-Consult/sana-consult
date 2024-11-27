@@ -7,9 +7,9 @@
   --font_current: "din-2014", Arial, Helvetica, sans-serif, serif;
 	/* color palette */
 	--color_0: black;
-	--color_1: white;
+	--color_1: #F0EBE9;
 
-  --color_2: blue;
+  --color_2: #b70e0c;
 	--color_3: white;
 	--color_4: cyan;
 	--color_5: darkmagenta;
@@ -47,6 +47,9 @@
 	--height_header_cell: 30px;
 	--width_header_cell: 100px;
 	--width_header_max: 700px;
+	
+	--height_home_cell: 50px;
+	--width_home_cell: 100px;
 
 	--width_content_max: 800px;
 }

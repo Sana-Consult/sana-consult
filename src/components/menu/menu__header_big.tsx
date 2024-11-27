@@ -23,7 +23,7 @@ const header_box_style = {
 }
 
 const style_cell = {
-	width: get_css_value("--width_header_cell"),
+	width: get_css_value("--width_home_cell"),
 	height: get_css_value("--height_header_cell"),
 	fontFamily: get_css_value("--font_title"),
   fontWeight: 700,

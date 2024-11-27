@@ -52,10 +52,8 @@ export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
   const [is, set_is] = useState(false);
   const toggle_button = () => {
     if (is) {
-      // button_style.background = "cyan";
       set_is(false);
     } else {
-      // button_style.background = "magenta";
       set_is(true);
     }
   }
@@ -103,23 +101,25 @@ export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, classNam
 // GO HOME
 //////////////////
 export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, style_cell}) => {
-	let size = get_css_value("--height_header_cell");
-	if(size === undefined) {
-		size = "100px";
+  let h = get_css_value("--height_home_cell");
+	let w = get_css_value("--width_home_cell");
+	if(h === undefined) {
+		h = "50px";
 	}
-  size = size.slice(0,-2);
-
+  if(w === undefined) {
+		w = "100px";
+	}
 	return (
     <NavCellBox to="/" className_box={className_box} style_box={style_box} className_cell={className_cell} style_cell={style_cell}>
-      <div style={{maxWidth: size+"px", maxHeight:size+"px"}}>
+        <div style={{maxWidth: w, maxHeight: h}}>
         <StaticImage 	src="./../../medias/home.png" alt="Home" 
                       placeholder="blurred" layout="constrained"
-                      // imgStyle={img_style} 
                       />
       </div>
 	  </NavCellBox>
   )
 }
+
 
 
 /////////////////////////////
