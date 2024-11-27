@@ -1,7 +1,7 @@
 /**
  * Render Home
  * 2024-2024
- * v 0.0.2
+ * v 0.0.3
  * */
 
 // REACT
@@ -9,6 +9,7 @@ import React, { FC } from "react";
 import { useContext } from "react";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 // APP
 import { get_css_value, useNode } from "../utils/hu.tsx";
@@ -25,6 +26,7 @@ interface Props {
 const style_titles = {
   fontFamily: get_css_value("--font_title"),
   marginTop: 24,
+  marginBottom: 12,
   maxWidth: 600,
 }
 
@@ -68,14 +70,21 @@ export const RenderHome: FC<Props> =() => {
   const info = frontmatter;
 
   return <>
-      <h1 style={style_titles}>{info.title}</h1>
-      <h4 style={style_subtitles}>{info.subtitle}</h4>
-      <h3 style={question_styles}>{info.message}</h3>
-      <p>
-        <ButtonCodeNav what={info.misc} to="/contact"/>
-      </p>
-      <p style={paragraph_styles}>
-        <MarkdownHtml html={html} />
-      </p>
+      <div>
+        <div style={style_titles}>
+          <StaticImage 	src="./../../medias/logo_sana_long.png" alt="Sana Consult" 
+                        placeholder="blurred" layout="constrained"
+                        />
+        </div>
+        {/* <h1 style={style_titles}>{info.title}</h1> */}
+        <h4 style={style_subtitles}>{info.subtitle}</h4>
+        <h3 style={question_styles}>{info.message}</h3>
+        <p>
+          <ButtonCodeNav what={info.misc} to="/contact"/>
+        </p>
+        <p style={paragraph_styles}>
+          <MarkdownHtml html={html} />
+        </p>
+      </div>
   </>
 }

@@ -29,10 +29,12 @@ import { Layout } from "./../components/hc.tsx";
 
 const IndexPage: FC<PageProps> = () => {
   return (
-    <Layout>
-      <RenderHome/>
-      {/* <RenderAbout/> */}
-    </Layout>
+    <div >
+      <Layout>
+        <RenderHome/>
+        {/* <RenderAbout/> */}
+      </Layout>
+    </div>
   )
 }
 

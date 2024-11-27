@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
@@ -17,6 +19,15 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    // FONT
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
     // FILE
      // FILE
      {
@@ -41,6 +52,15 @@ const config: GatsbyConfig = {
       },
     },
     // {
+    //   resolve: "gatsby-plugin-react-svg",
+    //   options: {
+    //     rule: {
+    //       include: /assets/, // See below to configure properly
+    //     }
+    //   }
+    // },
+    // {
+
     // resolve: 'gatsby-source-filesystem',
     // options: {
     //   "name": "pages",

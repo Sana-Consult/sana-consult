@@ -3,8 +3,8 @@
 	--box_default_design: 0;
 	
 	/* font palette  */
-	--font_title: "lunatix", "oso-serif-variable", Arial, Helvetica, sans-serif, serif;
-  --font_current: "din-2014", Arial, Helvetica, sans-serif, serif;
+	--font_title: aptly, Arial, Helvetica, sans-serif, serif;
+  --font_current: aptly, Arial, Helvetica, sans-serif, serif;
 	/* color palette */
 	--color_0: black;
 	--color_1: #F0EBE9;
@@ -47,7 +47,7 @@
 	--height_header_cell: 30px;
 	--width_header_cell: 100px;
 	--width_header_max: 700px;
-	
+
 	--height_home_cell: 50px;
 	--width_home_cell: 100px;
 
@@ -55,6 +55,7 @@
 }
 
 body {
+	/* font-family: */
   font-family: var(--font_current);
   background: var(--color_global);
 	color: var(--color_text_current);
