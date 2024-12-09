@@ -44,6 +44,16 @@ const paragraph_styles = {
   marginBottom: 48,
 }
 
+
+const style = {
+    color: "var(--color_global)",
+    padding: "0.25em",
+    background: "var(--color_button)",
+    fontSize: "1.25rem",
+    borderRadius: "0.5em",
+    cursor: "pointer",
+  }
+
 export const RenderHome: FC<Props> =() => {
   const data = useStaticQuery(
     graphql`
@@ -80,7 +90,7 @@ export const RenderHome: FC<Props> =() => {
         <h4 style={style_subtitles}>{info.subtitle}</h4>
         <h3 style={question_styles}>{info.message}</h3>
         <p>
-          <ButtonCodeNav what={info.misc} to="/contact"/>
+          <ButtonCodeNav style={style} what={info.misc} to="/contact"/>
         </p>
         <p style={paragraph_styles}>
           <MarkdownHtml html={html} />

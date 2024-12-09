@@ -3,42 +3,42 @@
 	--box_default_design: 0;
 	
 	/* font palette  */
-	--font_title: aptly, Arial, Helvetica, sans-serif, serif;
-  --font_current: aptly, Arial, Helvetica, sans-serif, serif;
+	--font_title: "aptly", Arial, Helvetica, sans-serif, serif;
+  --font_current: "aptly", Arial, Helvetica, sans-serif, serif;
 	/* color palette */
-	--color_0: black;
-	--color_1: #F0EBE9;
+	--color_00: #32302E;
+	--color_01: #3F3C39;
+	--color_02: #484745;
+	--color_03: #7A7977;
 
-  --color_2: #b70e0c;
-	--color_3: white;
-	--color_4: cyan;
-	--color_5: darkmagenta;
-	--color_6: indigo;
+	--color_10: #F0EBE9;
+
+  --color_20: #b70e0c;
 
 
 	/* the app color */
-	--color_text_dark: var(--color_5);
-	--color_text_light: var(--color_3);
+	--color_text_dark: var(--color_01);
+	--color_text_light: var(--color_10);
 
-	--color_text_title: var(--color_2);
-	--color_text_subtitle: var(--color_2);
-	--color_text_current: var(--color_2);
+	--color_text_title: var(--color_02);
+	--color_text_subtitle: var(--color_01);
+	--color_text_current: var(--color_03);
 
-	--color_global: var(--color_3);
+	--color_global: var(--color_10);
 
-	--color_line: var(--color_2);
+	--color_line: var(--color_20);
 
-	--color_header: var(--color_3);
-	--color_menu_big: var(--color_3);
-	--color_menu_small: var(--color_3);
+	--color_header: var(--color_10);
+	--color_menu_big: var(--color_10);
+	--color_menu_small: var(--color_10);
 
-	--color_footer: var(--color_2);
+	--color_footer: var(--color_20);
 
-	--color_bg_form: var(--color_2);
+	--color_bg_form: var(--color_01);
 
-	--color_button: var(--color_2);
+	--color_button: var(--color_20);
 
-	--layout_bg: var(--color_3);
+	--layout_bg: var(--color_10);
 
 	--screen_min: 600px;
 
@@ -55,7 +55,6 @@
 }
 
 body {
-	/* font-family: */
   font-family: var(--font_current);
   background: var(--color_global);
 	color: var(--color_text_current);
@@ -70,19 +69,21 @@ input {
   box-sizing: border-box;
   padding: 0.3em;
   margin: 0.3em;
+	border-radius:  0.5em;
+	width: 25em;
 }
 
-input[type="text"] {
+/* input[type="text"] {
   width: 25em;
 }
 
 input[type="email"] {
-  width: 20em;
+  width: 25em;
 }
 
 input[type="password"] {
-  width: 20em;
-}
+  width: 25em;
+} */
 
 textarea {
   background: var(--color_bg_form);
@@ -91,6 +92,7 @@ textarea {
   margin: 0.3em;
   width: 25em;
   height: 10em;
+	border-radius:  0.5em;
 }
 
 .header {

@@ -4,7 +4,7 @@ title: "Sana Consult"
 subtitle: "Mit Sana Consult optimieren Sie die Leistung Ihrer Praxis in dank unserer einzigartigen Expertise und bieten Ihrem Team und Ihren Patienten eine einzigartige Erfahrung."
 categorie: "home"
 message: "Ein Bedürfnis"
-misc: "println(”Senden Sie Ihr Projekt an uns”);"
+misc: "Senden Sie Ihr Projekt an uns"
 lang: "de"
 ---
 \

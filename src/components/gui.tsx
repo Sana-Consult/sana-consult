@@ -1,7 +1,7 @@
 /**
  * GUI
- * 2023-2023
- * v 0.0.2
+ * 2023-2024
+ * v 0.0.3
  * 
  * */
 // REACT
@@ -26,6 +26,7 @@ interface DesignProps {
 // BUTTON
 ///////////////////
 interface ButtonProps {
+  style: {};
   what: string;
   to: string;
 }
@@ -39,16 +40,7 @@ interface ButtonProps {
 ////////////////
 // in progress
 ///////////////
-export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
-  let button_style = {
-    color: "var(--color_global)",
-    padding: 4,
-    background: "var(--color_2)",
-    fontSize: "1.25rem",
-    borderRadius: 4,
-    cursor: "pointer",
-  }
-
+export const ButtonCodeNav : FC<ButtonProps> = ({style, what, to}) => {
   const [is, set_is] = useState(false);
   const toggle_button = () => {
     if (is) {
@@ -60,7 +52,7 @@ export const ButtonCodeNav : FC<ButtonProps> = ({what, to}) => {
 
   return (
     <NavCell to={to}>
-        <code onClick={() => toggle_button()} style={button_style}>{what}</code>
+        <code onClick={() => toggle_button()} style={style}>{what}</code>
     </NavCell>
   )
 }

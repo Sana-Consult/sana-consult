@@ -22,7 +22,8 @@ const Contact: FC<PageProps> = () => {
     fontWeight: 700,
     fontSize: 18,
     color: get_css_value("--color_text_light"),
-    background: get_css_value("--color_button")
+    background: get_css_value("--color_button"),
+    borderRadius: "0.5em"
   }
 
   const style_box = {
