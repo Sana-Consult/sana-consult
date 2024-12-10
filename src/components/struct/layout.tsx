@@ -1,14 +1,11 @@
 /**
  * Layout
- * 2023-2023
- * v 0.0.2
+ * 2023-2024
+ * v 0.0.3
  * 
  * */
 // REACT
 import React, { FC } from "react";
-// OTHER
-// import Skeleton from 'react-loading-skeleton'
-// import 'react-loading-skeleton/dist/skeleton.css'
 // APP
 import { Header } from "./header";
 import { Footer } from "./footer";
@@ -44,15 +41,4 @@ export const Layout: FC<Props> = ({children}) => {
   </>
   );
 };
-// export const Layout: FC<Props> = ({children}) => {
-//   return (<>
-//     { <Header/> || <Skeleton/> }
-//     <div style={style_content_box}>
-//       <div style={style_content_cell}>
-//         {children || <Skeleton/>}
-//       </div>
-//     </div>
-//     { <Footer/> || <Skeleton/> }
-//     </>
-//   );
-// };
+

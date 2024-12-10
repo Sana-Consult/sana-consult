@@ -8,15 +8,76 @@
 import React, { FC } from "react";
 import { useContext } from "react";
 // APP
-import { NavCellBox, Box, GoHome, DropdowRegions } from "../hc.tsx"
+import { NavCellBox, Box, GoHome, DropdowRegions, Dropdown } from "../hc.tsx"
 import { get_css_value } from "../../utils/hu.tsx";
 import tree from "./../../../medias/tree.json";
 import { RegionContext, HeaderContext } from "../../context.tsx";
 
 
+//////////////////////////
+// MENU REGION
+////////////////////////////////
+
+interface PropsCell {
+  className_box?: string;
+  style_box?: any;
+  className_cell?: string;
+  style_cell?: any;
+	in_line ?: boolean;
+	keys:[];
+	index: number;
+	children: any;
+}
+
+const Cell: FC<PropsCell> =({className_box, style_box, className_cell, style_cell, keys, index, children}) => {
+	const { set_lang } = useContext(RegionContext);
+	function mouse_click(event: any) {
+		event.preventDefault();
+		set_lang(keys[index]);
+	}
+
+	return <Box className={className_box} style={style_box}>
+		<div className={className_cell} style={style_cell} onClick={mouse_click}>
+			{children}
+		</div>
+	</Box>
+}
+
+interface PropsRegion extends PropsCell  {
+	values?: any;
+	offset? : string;
+}
+
+const MenuRegion: FC<PropsRegion> = ({className_box, style_box, className_cell, style_cell, values, keys}) =>{
+	// we cannot use key for the props because it's react reserved word
+	return <>
+		{values.map((elem : any, key : any) => {
+			return <Cell className_box={className_box} style_box={style_box} 
+										className_cell={className_cell} style_cell={style_cell}
+										keys={keys} index={key}>
+					{elem}
+				</Cell>
+		})}
+	</>	
+}
+
+
+
+export const Region: FC<PropsRegion> =({style_box, style_cell, offset}) =>{
+	const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
+	const { lang } = useContext(RegionContext);
+
+	return <Dropdown 	name={tree[lang].lang[lang]}
+										style_box={style_box} style_cell={style_cell} 
+										offset={offset}
+										is={lang_db_is} set_is={set_lang_db_is}>
+		<MenuRegion style_box={style_box} style_cell={style_cell} 
+								values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} />
+	</Dropdown>
+}
 
 // need to define properly the any... it's very too much and very lazy !
-interface Props {
+interface PropsMenu {
   className_box?: string;
   style_box?: any;
   className_cell?: string;
@@ -25,9 +86,8 @@ interface Props {
 }
 
 
-export const MenuHeaderContent: FC<Props> =({className_box, style_box, className_cell, style_cell, in_line}) => {
+export const MenuHeaderContent: FC<PropsMenu> =({className_box, style_box, style_cell, in_line}) => {
   const { lang } = useContext(RegionContext);
-	// const { other_db_is, num_item_bd } = useContext(HeaderContext);
   let hh = get_css_value("--height_header");
 	let hhc = get_css_value("--height_header_cell");
 	let height_header = 0;
@@ -58,7 +118,6 @@ export const MenuHeaderContent: FC<Props> =({className_box, style_box, className
 	// may be this elements can be passed like a children ????
   return <Box className={className_box} style={style_box}>
 		{in_line !== false ? <GoHome style_box={box} style_cell={cell}/> : <></>}
-		{/* {in_line !== false ? <GoHome className_box={"home_box"} style_box={box} style_cell={cell}/> : <></>} */}
     <NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
 		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 

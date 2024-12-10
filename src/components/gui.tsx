@@ -1,7 +1,7 @@
 /**
  * GUI
  * 2023-2024
- * v 0.0.3
+ * v 0.0.4
  * 
  * */
 // REACT
@@ -22,6 +22,19 @@ interface DesignProps {
   className_cell?: string;
   style_cell?: any;
 }
+
+
+
+///////////////////
+// HAMBURGER
+///////////////////
+export function Hamburger(props: any) {
+	return <Box className={props.className_box} style={props.style_box}>
+		{props.children}
+	</Box>
+}
+
+
 ///////////////////
 // BUTTON
 ///////////////////
@@ -67,7 +80,6 @@ interface NavProps extends DesignProps {
   to: string;
   className?: string;
   style?: any;
-
 }
 
 // NavCell
@@ -88,19 +100,18 @@ export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, classNam
 		</Box>
 }
 
-
-
 // GO HOME
 //////////////////
-export const GoHome: FC<NavProps> = ({className_box, style_box, className_cell, style_cell}) => {
+export const GoHome: FC<DesignProps> = ({className_box, style_box, className_cell, style_cell}) => {
   let h = get_css_value("--height_home_cell");
-	let w = get_css_value("--width_home_cell");
+	let w = get_css_value("--height_home_cell");
 	if(h === undefined) {
 		h = "50px";
 	}
   if(w === undefined) {
-		w = "100px";
+		w = "50px";
 	}
+
 	return (
     <NavCellBox to="/" className_box={className_box} style_box={style_box} className_cell={className_cell} style_cell={style_cell}>
         <div style={{maxWidth: w, maxHeight: h}}>
@@ -222,63 +233,7 @@ export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, c
 	</>	
 }
 
-//////////////////
-//
-// DON'T WORK YET
-//
-// DROPDOWN RADIO
-//
-// 
-//
-//////////////////
 
 
-/*
-export const DropdownRadio: FC<DropdownProps> = ({	name,
-                                                    className_box, style_box, className_cell, style_cell, offset,
-                                                    value, 
-                                                    children}) => {
-  // context
-  const [toggle_is, set_toggle_is] = useContext(DropdownRadioContext);
-  const checked = value === toggle_is;
 
 
-  const style_display = {
-    display: "flex",
-    flexDirection: "column",
-    padding: offset + " 0",
-  }
-
-  const style_input = {
-    height:"0px",
-    width: "0px",
-    zindex:"1",
-    opacity: "0",
-    cursor: "pointer",
-  }
-
-  // close the dropdown after use it
-  function close(event: { preventDefault: () => void; }) {
-    event.preventDefault();
-    set_toggle_is("");
-  }
-  
-  return <Box className={className_box} style={style_box}>
-			<label>
-				<input
-							style={style_input}
-							// className="dropdown_input"
-							id="radio_button"
-							value={value}
-							checked={checked}
-							type="radio"
-							onChange={({ target }) => {
-								// some code if necessary
-								set_toggle_is(target.value)}}
-						/>
-				<div className={className_cell} style={style_cell}>{name}</div>			
-			</label>	
-			{toggle_is === value ? <div onClick={close} style={style_display}>{children}</div> : <></>}
-	</Box>
-}
-*/

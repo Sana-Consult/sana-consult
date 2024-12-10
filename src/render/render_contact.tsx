@@ -1,7 +1,7 @@
 /**
  * Render Contact
- * 2023-2023
- * v 0.0.2
+ * 2023-2024
+ * v 0.0.3
  * 
  * */
 
@@ -52,7 +52,6 @@ export const RenderContact: FC<Props> =({style_box, style_cell, style_form}) => 
   const info = frontmatter;
   return <>
     <h1>{info.title}</h1>
-    {/* <ContentMarkdownHtml html={node.html} /> */}
     <FormNetlify style={style_form} id_name="contact">
       {/* The dot notation give the opportunity to only load Form */}
       <Form.Input type="text" name="first name" placeholder={info.firstname}/>
