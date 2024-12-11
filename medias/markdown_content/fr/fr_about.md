@@ -1,7 +1,7 @@
 ---
 menu: "about"
 title: "Qui sommes-nous ?"
-subtitle: ""
+subtitle: "Céline Reibel-Gruber fondatrice"
 categorie : "about"
 message: ""
 misc: ""

@@ -1,7 +1,7 @@
 ---
 menu: "about"
 title: "Über"
-subtitle: ""
+subtitle: "Céline Reibel-Gruber gründerin"
 categorie : "about"
 message: ""
 misc: ""

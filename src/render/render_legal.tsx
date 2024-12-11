@@ -9,7 +9,7 @@ import React, { FC } from "react";
 import { useContext } from "react";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
-
+import { StaticImage } from "gatsby-plugin-image";
 // APP
 import { get_css_value, useNode } from "../utils/hu.tsx";
 import { RegionContext } from "./../context.tsx";
@@ -32,6 +32,13 @@ const title_styles = {
   maxWidth: 600,
 }
 
+const style_image = {
+  maxWidth: "100px",
+}
+
+const subtitle_style = {
+}
+
 export const RenderLegal: FC<Props> =() => {
   const data = useStaticQuery(
     graphql`
@@ -41,6 +48,7 @@ export const RenderLegal: FC<Props> =() => {
             node {
               frontmatter {
                 title
+                subtitle
                 lang
               }
               html
@@ -54,10 +62,20 @@ export const RenderLegal: FC<Props> =() => {
   const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter.title;
 
+
   return <>
       <h2 style={title_styles}>{info}</h2>
       <p style={paragraph_styles}>
         <MarkdownHtml html={html} />
       </p>
+      <p style={subtitle_style}>{frontmatter.subtitle}</p>
+      <div style={style_image}>
+      
+        <StaticImage 	src="./../../medias/visuel/OWL_logo.png" alt="OWL" 
+                        placeholder="blurred" layout="constrained"
+                        />
+      </div>
   </>
 }
+
+// https://www.owlsite.org/

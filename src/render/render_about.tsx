@@ -1,7 +1,7 @@
 /**
  * Render Contact
- * 2023-2023
- * v 0.0.1
+ * 2023-2024
+ * v 0.0.2
  * 
  * */
 
@@ -10,7 +10,7 @@ import React, { FC } from "react";
 import { useContext } from "react";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
-
+import { StaticImage } from "gatsby-plugin-image";
 // APP
 import { useNode } from "../utils/hu.tsx";
 import { MarkdownHtml } from "../components/hc.tsx";
@@ -21,15 +21,12 @@ interface Props {
   // data? : any;
 }
 
-
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 42,
-  maxWidth: 600,
+const paragraphe_styles = {
+  marginBottom: "0.5em",
 }
 
-const paragraphStyles = {
-  marginBottom: 48,
+const style_image = {
+  maxWidth: "300px",
 }
 
 export const RenderAbout: FC<Props> =() => {
@@ -60,8 +57,14 @@ export const RenderAbout: FC<Props> =() => {
   const info = frontmatter;
 
   return <>
-    <h2 style={headingStyles}>{info.subtitle}</h2>
-    <p style={paragraphStyles}>
+    <h4>{info.subtitle}</h4>
+    <div style={style_image}>
+      <StaticImage 	src="./../../medias/visuel/celine_reibel_portrait.jpg" alt="Céline Reibel" 
+                        placeholder="blurred" layout="constrained"
+                        />
+    </div>
+    <a href="https://www.studiolecarre.com/" target="_blank">Photo : Studio le carré</a> 
+    <p style={paragraphe_styles}>
       <MarkdownHtml html={html} />
     </p>
   </>

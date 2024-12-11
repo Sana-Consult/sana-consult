@@ -101,6 +101,8 @@ export const MenuHeaderContent: FC<PropsMenu> =({className_box, style_box, style
 		position: "relative",
 		top: (height_header - height_header_cell) * 0.5+"px",
 		background: get_css_value("--color_menu_big"),
+		zIndex: 1,
+		// boxShadow : "0 -15em 1em 15em " +get_css_value("--color_shadow"),
 	};
 
   const temp_cell = {
@@ -123,10 +125,5 @@ export const MenuHeaderContent: FC<PropsMenu> =({className_box, style_box, style
 		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
 										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
 		} }/>
-
-		{/* {in_line === true ? 
-			<DropdownRadioGroup style_box={box} style_cell={cell} offset={(height_header - height_header_cell) * 0.5+"px"} in_line={in_line} /> : 
-			<DropdownClassic style_box={box} style_cell={cell} offset={offset_dropdown} in_line={in_line} />
-		} */}
   </Box>
 }

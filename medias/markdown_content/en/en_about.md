@@ -1,7 +1,7 @@
 ---
 menu: "about"
 title: "About"
-subtitle: ""
+subtitle: "Céline Reibel-Gruber founder"
 categorie : "about"
 message: ""
 misc: ""

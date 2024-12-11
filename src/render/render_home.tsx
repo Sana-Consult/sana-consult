@@ -32,12 +32,13 @@ const style_titles = {
 
 const style_subtitles = {
   color: "var(--color_text_subtitle)",
+  maxWidth: 550,
   marginLeft: 24,
 }
 
 const question_styles = {
-  marginLeft: 24,
-  marginBottom: -8,
+  marginLeft: 68,
+  marginBottom: 12,
 }
 
 const paragraph_styles = {
@@ -86,12 +87,9 @@ export const RenderHome: FC<Props> =() => {
                         placeholder="blurred" layout="constrained"
                         />
         </div>
-        {/* <h1 style={style_titles}>{info.title}</h1> */}
-        <h4 style={style_subtitles}>{info.subtitle}</h4>
+        <h5 style={style_subtitles}>{info.subtitle}</h5>
         <h3 style={question_styles}>{info.message}</h3>
-        <p>
-          <ButtonCodeNav style={style} what={info.misc} to="/contact"/>
-        </p>
+        <ButtonCodeNav style={style} what={info.misc} to="/contact"/>
         <p style={paragraph_styles}>
           <MarkdownHtml html={html} />
         </p>

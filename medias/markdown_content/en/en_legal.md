@@ -1,6 +1,7 @@
 ---
 menu: "legal"
 title: "Legals"
+subtitle: "Member of the association"
 categorie : "legal"
 lang: "en"
 ---

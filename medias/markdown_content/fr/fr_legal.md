@@ -1,6 +1,7 @@
 ---
 menu: "légal"
 title: "Mentions Légales"
+subtitle: "Membre de l'association"
 categorie : "legal"
 lang: "fr"
 ---

@@ -53,7 +53,6 @@ export const RenderContact: FC<Props> =({style_box, style_cell, style_form}) => 
   return <>
     <h1>{info.title}</h1>
     <FormNetlify style={style_form} id_name="contact">
-      {/* The dot notation give the opportunity to only load Form */}
       <Form.Input type="text" name="first name" placeholder={info.firstname}/>
       <Form.Input type="text" name="family name" placeholder={info.lastname}/>
       <Form.Input type="email" name="email" placeholder={info.mail}/>

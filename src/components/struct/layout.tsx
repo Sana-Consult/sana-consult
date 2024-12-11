@@ -15,9 +15,15 @@ import './layout.css';
 interface Props {
   children? : React.ReactNode;
 }
-const style_content_box = {
+
+const style_header = {
   background : get_css_value("--layout_bg"),
-  borderTop: "2px solid " + get_css_value("--color_line"),
+  boxShadow : "0 -15em 1em 15em " +get_css_value("--color_shadow"),
+}
+
+const style_body = {
+  background : get_css_value("--layout_bg"),
+
 }
 const style_content_cell = {
   color: get_css_value("--color_text"),
@@ -29,10 +35,18 @@ const style_content_cell = {
   maxWidth: get_css_value("--width_content_max"),
 }
 
+const headingStyles = {
+  marginBottom: "1em",
+  // maxWidth: 600,
+}
+
 export const Layout: FC<Props> = ({children}) => {
   return (<>
-    <Header/>
-    <div style={style_content_box}>
+    <div style={style_header}>
+      <Header/>
+    </div>
+    <div style={headingStyles}></div >
+    <div style={style_body}>
       <div style={style_content_cell}>
         {children}
       </div>

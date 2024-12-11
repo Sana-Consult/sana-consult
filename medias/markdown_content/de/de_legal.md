@@ -1,6 +1,7 @@
 ---
 menu: "legal"
 title: "Rechtliche hinweise"
+subtitle: "Mitglied der Vereinigung"
 categorie : "legal"
 lang: "de"
 ---

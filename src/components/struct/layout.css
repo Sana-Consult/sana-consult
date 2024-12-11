@@ -17,6 +17,8 @@
 
 
 	/* the app color */
+  --color_shadow: var(--color_03);
+
 	--color_text_dark: var(--color_01);
 	--color_text_light: var(--color_10);
 
@@ -117,8 +119,20 @@ h3 {
 	font-size: 1.5em;
 }
 
-h4, h5, h6 {
+h4 {
 	font-size: 1.25em;
+}
+
+h5 {
+	font-size: 1.1em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+a {
+  font-size: 0.7em;
 }
 
 
@@ -142,10 +156,26 @@ h4, h5, h6 {
 	h2 {
 		font-size: 1.5em;
 	}
+
+  h3{
+		font-size: 1.4em;
+	}
 	
-	h3, h4, h5, h6 {
+	h4{
 		font-size: 1.2em;
 	}
+
+  h5{
+		font-size: 1em;
+	}
+
+  h6 {
+    font-size: 0.6em;
+  }
+
+  a {
+    font-size: 0.6em;
+  }
 }
 
 
