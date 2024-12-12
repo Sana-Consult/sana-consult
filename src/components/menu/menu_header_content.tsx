@@ -1,7 +1,7 @@
 /**
  * MENU HEADER CONTENT
  * 2023-2024
- * V 0.0.4
+ * V 0.1.0
  */
 
 // REACT
@@ -61,8 +61,6 @@ const MenuRegion: FC<PropsRegion> = ({className_box, style_box, className_cell, 
 	</>	
 }
 
-
-
 export const Region: FC<PropsRegion> =({style_box, style_cell, offset}) =>{
 	const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
 	const { lang } = useContext(RegionContext);
@@ -85,9 +83,10 @@ interface PropsMenu {
 	in_line ?: boolean
 }
 
-
+////////////////////
+// MenuHeaderContent
+////////////////////
 export const MenuHeaderContent: FC<PropsMenu> =({className_box, style_box, style_cell, in_line}) => {
-  const { lang } = useContext(RegionContext);
   let hh = get_css_value("--height_header");
 	let hhc = get_css_value("--height_header_cell");
 	let height_header = 0;
@@ -118,12 +117,48 @@ export const MenuHeaderContent: FC<PropsMenu> =({className_box, style_box, style
 	const cell = Object.assign({}, temp_cell);
 
 	// may be this elements can be passed like a children ????
-  return <Box className={className_box} style={style_box}>
-		{in_line !== false ? <GoHome style_box={box} style_cell={cell}/> : <></>}
-    <NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
+	return <Box className={className_box} style={style_box}>
+	{in_line !== false ?
+		<RenderMenuBig className_box={className_box} style_box={box} style_cell={cell} box={box} cell={cell} height_header={height_header}/>:
+		<RenderMenuSmall className_box={className_box} style_box={box} style_cell={cell} box={box} cell={cell} height_header={height_header}/>
+		}
+	</Box>
+}
+
+// RENDER MENU
+interface PropsMenuRender extends PropsMenu {
+  box: string;
+  cell: any;
+	height_header: number;
+}
+
+const RenderMenuBig: FC<PropsMenuRender> =({className_box, style_box, box, cell, height_header}) => {
+	let { lang } = useContext(RegionContext);
+	
+	// cette solution ne fonctionne pas
+	// if (lang === null) {
+	// 	lang = "fr";
+	// 	(lang as unknown) as string;
+	// }
+	return <>
+		<div className={"flex"}>
+			<GoHome style_box={box} style_cell={cell}/>
+			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
+			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+		</div>
+		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
+										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
+		} }/>
+	</>
+}
+
+const RenderMenuSmall: FC<PropsMenuRender> =({className_box, style_box, box, cell, height_header}) => {
+	const { lang } = useContext(RegionContext);
+	return <Box className={className_box} style={style_box}>
+		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
 		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
 										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
 		} }/>
-  </Box>
+	</Box>
 }

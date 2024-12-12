@@ -12,6 +12,7 @@
 	--color_03: #7A7977;
 
 	--color_10: #F0EBE9;
+  --color_100: white;
 
   --color_20: #b70e0c;
 
@@ -20,6 +21,7 @@
   --color_shadow: var(--color_03);
 
 	--color_text_dark: var(--color_01);
+  --color_text_medium: var(--color_03);
 	--color_text_light: var(--color_10);
 
 	--color_text_title: var(--color_02);
@@ -36,7 +38,7 @@
 
 	--color_footer: var(--color_20);
 
-	--color_bg_form: var(--color_01);
+	--color_bg_form: var(--color_100);
 
 	--color_button: var(--color_20);
 
@@ -67,12 +69,17 @@ body {
 
 input {
   background: var(--color_bg_form);
-	color: var(--color_text_light);
+	color: var(--color_text_title);
   box-sizing: border-box;
   padding: 0.3em;
   margin: 0.3em;
+  border : 0.15rem solid var(--color_text_title);
 	border-radius:  0.5em;
 	width: 25em;
+}
+
+input::placeholder {
+  color:  var(--color_text_medium);;
 }
 
 /* input[type="text"] {
@@ -89,12 +96,17 @@ input[type="password"] {
 
 textarea {
   background: var(--color_bg_form);
-	color: var(--color_text_light);
+  color: var(--color_text_title);
 	padding: 0.3em;
   margin: 0.3em;
   width: 25em;
   height: 10em;
+  border : 0.15rem solid var(--color_text_title);
 	border-radius:  0.5em;
+}
+
+textarea::placeholder {
+  color:  var(--color_text_medium);;
 }
 
 .header {
@@ -203,7 +215,7 @@ a {
 #hamburger span {
   /* display: block; */
   position: absolute;
-  height: 0.4rem;
+  height: 0.2rem;
   width: 100%;
   background: var(--color_20);
   border-radius: 0.25rem;

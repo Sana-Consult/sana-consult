@@ -35,9 +35,8 @@ const style_content_cell = {
   maxWidth: get_css_value("--width_content_max"),
 }
 
-const headingStyles = {
+const style_for_shadow = {
   marginBottom: "1em",
-  // maxWidth: 600,
 }
 
 export const Layout: FC<Props> = ({children}) => {
@@ -45,7 +44,7 @@ export const Layout: FC<Props> = ({children}) => {
     <div style={style_header}>
       <Header/>
     </div>
-    <div style={headingStyles}></div >
+    <div style={style_for_shadow}></div >
     <div style={style_body}>
       <div style={style_content_cell}>
         {children}

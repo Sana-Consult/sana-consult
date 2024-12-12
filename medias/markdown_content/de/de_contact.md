@@ -9,6 +9,6 @@ lang: "de"
 send: "senden"
 firstname: "Vorname"
 lastname: "Nachname"
-mail: "e-mail"
+mail: "E-mail"
 ---
 German text
