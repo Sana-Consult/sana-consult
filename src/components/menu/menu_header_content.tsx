@@ -8,7 +8,7 @@
 import React, { FC } from "react";
 import { useContext } from "react";
 // APP
-import { NavCellBox, Box, GoHome, DropdowRegions, Dropdown } from "../hc.tsx"
+import { NavCellBox, Box, GoHome, DropdowRegions, Dropdown, DropdownRegionsBig } from "../hc.tsx"
 import { get_css_value } from "../../utils/hu.tsx";
 import tree from "./../../../medias/tree.json";
 import { RegionContext, HeaderContext } from "../../context.tsx";
@@ -65,10 +65,28 @@ export const Region: FC<PropsRegion> =({style_box, style_cell, offset}) =>{
 	const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
 	const { lang } = useContext(RegionContext);
 
+	// Je ne trouve pas le moyen d'éviter le null et donc l'erreur avec "lang"
+
+	// SOLUTION 1
+	// let index = "0";
+	// if(lang !== null) index = lang;
+
+	// SOLUTION 2
+	// if(lang === null) {
+	// return <></>
+	// } else 
+
+	// SOLUTION 3
+	// if (lang === null) {
+	// 	lang = "fr";
+	// 	(lang as unknown) as string;
+	// }
+
 	return <Dropdown 	name={tree[lang].lang[lang]}
 										style_box={style_box} style_cell={style_cell} 
 										offset={offset}
-										is={lang_db_is} set_is={set_lang_db_is}>
+										is={lang_db_is} 
+										set_is={set_lang_db_is}>
 		<MenuRegion style_box={style_box} style_cell={style_cell} 
 								values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} />
 	</Dropdown>
@@ -134,25 +152,33 @@ interface PropsMenuRender extends PropsMenu {
 
 const RenderMenuBig: FC<PropsMenuRender> =({className_box, style_box, box, cell, height_header}) => {
 	let { lang } = useContext(RegionContext);
+
+	const shadow_style = {
+		boxShadow : "0 -15em 1em 15em " +get_css_value("--color_shadow"),
+	}
+	const shadow_dropdown_style = Object.assign({}, shadow_style, box);
 	
-	// cette solution ne fonctionne pas
-	// if (lang === null) {
-	// 	lang = "fr";
-	// 	(lang as unknown) as string;
-	// }
+	// Je ne trouve pas le moyen d'éviter le null et donc l'erreur avec "lang"
+	// voir ligne 70
 	return <>
 		<div className={"flex"}>
 			<GoHome style_box={box} style_cell={cell}/>
 			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
 		</div>
-		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
+		<DropdownRegionsBig/>
+		{/* <DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
 										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
-		} }/>
+		} }/> */}
+		{/* <DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
+										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
+		} }/> */}
 	</>
 }
 
 const RenderMenuSmall: FC<PropsMenuRender> =({className_box, style_box, box, cell, height_header}) => {
+	// Je ne trouve pas le moyen d'éviter le null et donc l'erreur avec "lang"
+	// voir ligne 70
 	const { lang } = useContext(RegionContext);
 	return <Box className={className_box} style={style_box}>
 		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>

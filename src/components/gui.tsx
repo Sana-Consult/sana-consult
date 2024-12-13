@@ -15,6 +15,8 @@ import tree from "./../../medias/tree.json";
 import { Box } from "./hc.tsx";
 import { get_css_value } from "../utils/hu.tsx";
 import { RegionContext, HeaderContext } from "./../context.tsx";
+// TAILWIND
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
 interface DesignProps {
   className_box?: string;
@@ -154,7 +156,7 @@ export const Dropdown: FC<DropdownProps> = ({name,
     const style_display = {
       display: "flex",
       flexDirection: "column",
-      padding: offset + " 0",
+      padding: offset + " 0"
     }
 
     function mouse_click(event: { preventDefault: () => void; }) {
@@ -172,8 +174,9 @@ export const Dropdown: FC<DropdownProps> = ({name,
       <div className={className_cell} style={style_cell} onClick={mouse_click}>{name}</div>
       {is ? 
       <div style={style_display} onClick={close}>
-      {children}
-      </div> : <></>}
+        {children}
+      </div> 
+      : <></>}
     </Box>
 }
 
@@ -200,7 +203,6 @@ interface RegionProps extends DesignProps {
 // we cannot use key for the props because it's react reserved word
 export const Region:FC<RegionProps>= ({className_box, style_box, className_cell, style_cell, keys, index, children}) => {
 	const { set_lang } = useContext(RegionContext);
-
 
 	function mouse_click(event: { preventDefault: () => void; }) {
 		event.preventDefault();
@@ -235,5 +237,66 @@ export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, c
 
 
 
+/////////////////////
+// DROPDOWN TAILWIND
+/////////////////////
+
+export const ElemRegion:FC<RegionProps>= ({keys, index, children}) => {
+	const { set_lang } = useContext(RegionContext);
+
+	function mouse_click(event: { preventDefault: () => void; }) {
+		event.preventDefault();
+		set_lang(keys[index]);
+	}
+
+  return <MenuItem>
+    <a
+      href="#"
+      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+      onClick={mouse_click}
+    >
+      {children}
+    </a>
+  </MenuItem>
+}
+
+interface SelectRegionProps extends DesignProps {
+  children?: ReactNode,
+  keys: string[],
+  values?: any
+}
+
+export const SelectRegions2 :FC<SelectRegionProps>= ({values, keys}) => {
+	// we cannot use key for the props because it's react reserved word
+	return <>
+		{values.map((elem : any, key : number) => {
+			return <ElemRegion keys={keys} index={key}>
+					{elem}
+				</ElemRegion>
+		})}
+	</>	
+}
 
 
+export function DropdownRegionsBig() {
+  const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
+	const { lang } = useContext(RegionContext);
+
+  return (
+    <Menu as="div" className="relative inline-block text-left">
+      <div>
+        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-3">
+        {tree[lang].lang[lang]}
+        </MenuButton>
+      </div>
+      <MenuItems
+        transition
+        className="absolute text-right right-0 z-10 mt-2 w-20 origin-top-right rounded-md bg-stone-200 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+      >
+        <div className="py-1">
+          <SelectRegions2 values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)}/>
+        </div>
+      </MenuItems>
+    </Menu>
+  )
+}
