@@ -167,12 +167,6 @@ const RenderMenuBig: FC<PropsMenuRender> =({className_box, style_box, box, cell,
 			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
 		</div>
 		<DropdownRegionsBig/>
-		{/* <DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
-										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
-		} }/> */}
-		{/* <DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
-										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
-		} }/> */}
 	</>
 }
 
@@ -183,7 +177,8 @@ const RenderMenuSmall: FC<PropsMenuRender> =({className_box, style_box, box, cel
 	return <Box className={className_box} style={style_box}>
 		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
-		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.5 + "px"} 
+		{/* offset={(height_header) * 0.75 + "px" cette phrase n'est pas très propre comme code */}
+		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.75 + "px"} 
 										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
 		} }/>
 	</Box>

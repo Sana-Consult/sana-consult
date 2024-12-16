@@ -189,8 +189,11 @@ export const DropdowRegions: FC<DropdownProps>= ({className_box, style_box, clas
 										style_box={style_box} style_cell={style_cell} 
 										offset={offset}
 										is={lang_db_is} set_is={set_lang_db_is}>
-		<SelectRegions  style_box={style_box} style_cell={style_cell} 
-								    values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} />
+		<SelectRegions  style_box={style_box} 
+                    style_cell={style_cell}
+                    region = {lang}
+								    values={Object.values(tree[lang].lang)} 
+                    keys={Object.keys(tree[lang].lang)} />
 	</Dropdown>
 }
 
@@ -219,18 +222,21 @@ export const Region:FC<RegionProps>= ({className_box, style_box, className_cell,
 interface SelectRegionProps extends DesignProps {
   children?: ReactNode,
   keys: string[],
-  values?: any
+  values?: any,
+  region : string
 }
 
-export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, className_cell, style_cell, values, keys}) => {
+export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, className_cell, style_cell, region, values, keys}) => {
 	// we cannot use key for the props because it's react reserved word
 	return <>
 		{values.map((elem : any, key : number) => {
-			return <Region className_box={className_box} style_box={style_box} 
+      if(keys[key] !== region) {
+        return <Region className_box={className_box} style_box={style_box} 
 										className_cell={className_cell} style_cell={style_cell}
 										keys={keys} index={key}>
 					{elem}
 				</Region>
+      } else return <></>
 		})}
 	</>	
 }
@@ -252,7 +258,7 @@ export const ElemRegion:FC<RegionProps>= ({keys, index, children}) => {
   return <MenuItem>
     <a
       href="#"
-      className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900 data-[focus]:outline-none"
+      className="block px-4 py-2 text-sm text-sana_dark-400 data-[focus]:bg-sana_light-100 data-[focus]:text-sana_dark-100 data-[focus]:outline-none"
       onClick={mouse_click}
     >
       {children}
@@ -260,19 +266,15 @@ export const ElemRegion:FC<RegionProps>= ({keys, index, children}) => {
   </MenuItem>
 }
 
-interface SelectRegionProps extends DesignProps {
-  children?: ReactNode,
-  keys: string[],
-  values?: any
-}
-
-export const SelectRegions2 :FC<SelectRegionProps>= ({values, keys}) => {
+export const SelectRegionsTailwind :FC<SelectRegionProps>= ({values, keys, region}) => {
 	// we cannot use key for the props because it's react reserved word
 	return <>
 		{values.map((elem : any, key : number) => {
+      if(keys[key] !== region) {
 			return <ElemRegion keys={keys} index={key}>
 					{elem}
 				</ElemRegion>
+      } else return <></>
 		})}
 	</>	
 }
@@ -291,10 +293,10 @@ export function DropdownRegionsBig() {
       </div>
       <MenuItems
         transition
-        className="absolute text-right right-0 z-10 mt-2 w-20 origin-top-right rounded-md bg-stone-200 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute text-right right-0 z-10 mt-2 w-20 origin-top-right rounded-md bg-sana_light-200 shadow-lg ring-1 ring-sana_red-100 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
       >
         <div className="py-1">
-          <SelectRegions2 values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)}/>
+          <SelectRegionsTailwind values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} region={lang}/>
         </div>
       </MenuItems>
     </Menu>

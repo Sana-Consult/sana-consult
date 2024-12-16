@@ -12,7 +12,7 @@ import { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 // APP
-import { useNode } from "../utils/hu.tsx";
+import { useNode, get_css_value } from "../utils/hu.tsx";
 import { MarkdownHtml } from "../components/hc.tsx";
 import { RegionContext } from "./../context";
 
@@ -27,6 +27,8 @@ const paragraphe_styles = {
 
 const style_image = {
   maxWidth: "300px",
+  border: "2px solid " +get_css_value("--color_border"),
+  borderRadius: "10px",
 }
 
 export const RenderAbout: FC<Props> =() => {
@@ -58,8 +60,8 @@ export const RenderAbout: FC<Props> =() => {
 
   return <>
     <h4>{info.subtitle}</h4>
-    <div style={style_image}>
-      <StaticImage 	src="./../../medias/visuel/celine_reibel_portrait.jpg" alt="Céline Reibel" 
+    <div>
+      <StaticImage 	style={style_image} src="./../../medias/visuel/celine_reibel_portrait.jpg" alt="Céline Reibel" 
                         placeholder="blurred" layout="constrained"
                         />
     </div>

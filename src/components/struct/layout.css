@@ -6,44 +6,57 @@
 	--font_title: "aptly", Arial, Helvetica, sans-serif, serif;
   --font_current: "aptly", Arial, Helvetica, sans-serif, serif;
 	/* color palette */
-	--color_00: #32302E;
-	--color_01: #3F3C39;
-	--color_02: #484745;
-	--color_03: #7A7977;
 
-	--color_10: #F0EBE9;
-  --color_100: white;
 
-  --color_20: #b70e0c;
+
+	--dark_100: #7A7977;
+  --dark_200: #484745;
+  --dark_300: #3F3C39;
+  --dark_400: #32302E;
+
+	--light_100: #F7F4F2;
+  --light_200: #F0EBE9;
+  --light_300: #E6DFDC;
+  --light_400: #DED6D4;
+
+  --light_1000: white;
+
+  --red_100: #B70E0C;
+  --red_200: #A01007;
+  --red_300: #881001;
+  --red_400: #700E00;
 
 
 	/* the app color */
-  --color_shadow: var(--color_03);
+  --color_shadow: var(--dark_100);
 
-	--color_text_dark: var(--color_01);
-  --color_text_medium: var(--color_03);
-	--color_text_light: var(--color_10);
+	--color_text_dark: var(--dark_300);
+  --color_text_medium: var(--dark_100);
+	--color_text_light: var(--light_100);
 
-	--color_text_title: var(--color_02);
-	--color_text_subtitle: var(--color_01);
-	--color_text_current: var(--color_03);
+	--color_text_title: var(--dark_200);
+	--color_text_subtitle: var(--dark_300);
+	--color_text_current: var(--dark_100);
 
-	--color_global: var(--color_10);
+	--color_global: var(--light_100);
 
-	--color_line: var(--color_20);
+	--color_line: var(--dark_200);
+  --color_border: var(--dark_200);
 
-	--color_header: var(--color_10);
-	--color_menu_big: var(--color_10);
-	--color_menu_small: var(--color_10);
+	--color_header: var(--light_100);
+	--color_menu_big: var(--light_100);
+	--color_menu_small: var(--light_100);
+  --color_hamburger: var(--red_100);
 
-	--color_footer: var(--color_20);
+	--color_footer: var(--red_100);
 
-	--color_bg_form: var(--color_100);
+	--color_bg_form: var(--light_200);
+  --layout_bg: var(--light_100);
 
-	--color_button: var(--color_20);
+	--color_button: var(--red_100);
 
-	--layout_bg: var(--color_10);
 
+  /* autres param */
 	--screen_min: 600px;
 
 	--height_header: 48px;
@@ -73,7 +86,7 @@ input {
   box-sizing: border-box;
   padding: 0.3em;
   margin: 0.3em;
-  border : 0.15rem solid var(--color_text_title);
+  border : 0.15rem solid var(--color_border);
 	border-radius:  0.5em;
 	width: 25em;
 }
@@ -101,7 +114,7 @@ textarea {
   margin: 0.3em;
   width: 25em;
   height: 10em;
-  border : 0.15rem solid var(--color_text_title);
+  border : 0.15rem solid var(--color_border);
 	border-radius:  0.5em;
 }
 
@@ -217,7 +230,7 @@ a {
   position: absolute;
   height: 0.2rem;
   width: 100%;
-  background: var(--color_20);
+  background: var(--color_hamburger);
   border-radius: 0.25rem;
   opacity: 1;
   left: 0;
