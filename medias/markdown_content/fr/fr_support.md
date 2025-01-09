@@ -7,28 +7,40 @@ message: ""
 misc: ""
 lang: "fr"
 ---
-# Évaluer vos pratiques
+\
+&nbsp;
+## Des solutions sur mesure pour votre cabinet
+### Évaluer vos pratiques
+Un audit initial permet d’analyser vos processus, d’identifier les points à améliorer et de proposer des solutions adaptées. Ce diagnostic approfondi couvre :
+- •	L’efficacité organisationnelle.
+- •	Le parcours patient.
+- •	La performance économique.
+\
+\
+&nbsp;
+### Vous accompagner dans le changement
+Après l’audit, nous vous guidons pas à pas dans l’optimisation de votre cabinet :
+- •	Création et mise en place de procédures.
+- •	Formation des équipes.
+- •	Gestion de la communication interne et de l’e-réputation.
+- •	Suivi des KPI pour mesurer vos progrès.
+- •	Recherche et sélection de prestataires qualifiés pour répondre à vos besoins spécifiques, que ce soit pour des solutions technologiques, des services administratifs ou autres.
+- •	Mise en place et déploiement d’un CRM adapté à votre cabinet pour optimiser la gestion des patients, améliorer la communication interne et faciliter le suivi des performances.
+\
+\
+&nbsp;
+### Former vos équipes
+Renforcez les compétences de vos collaborateurs grâce à des modules de formation adaptés :
+- •	Gestion des rendez-vous et accueil des patients.
+- •	Optimisation des processus administratifs.
+- •	Techniques spécifiques en ophtalmologie, telles que la prise en charge des impayés CPAM.
+\
+\
+&nbsp;
+**SanaConsult est un organisme de formation agréé**, enregistré sous le numéro **84380914338** (cet enregistrement ne vaut pas agrément de l’État).
+\
+\
+&nbsp;
+**Des modules personnalisés sont également disponibles.** Contactez-nous pour discuter de vos besoins spécifiques et découvrir les solutions adaptées à votre équipe.
 
-## Vous avez besoin d’un regard extérieur sur votre structure ?
-Pour commencer, faisons connaissance afin de vous proposer la formule d’accompagnement la mieux adaptée à vos besoins.
-Un audit initial nous permettra d’identifier les pistes d'optimisation, les processus à simplifier, sécuriser ou perfectionner pour améliorer non seulement l'efficacité de votre équipe, mais aussi la performance globale de votre cabinet. 
-Nous réaliserons ensemble un état des lieux complet de vos pratiques et du parcours patient, avec pour objectif de vous fournir des solutions sur mesure, visant à harmoniser votre activité et à renforcer sa viabilité économique.
-
-# Vous accompagner
-
-À la suite de cet audit, un accompagnement sur mesure peut vous être proposé pour vous aider à atteindre vos objectifs. 
-Ensemble, nous définirons vos priorités, établirons un plan d’action clair et attribuerons un référent pour chaque tâche.
-Les domaines d'intervention sont variés : rédaction et mise en place de procédures, formation des équipes, gestion de la communication interne, mise en place d’outils de gestion de l’e-réputation, suivi des indicateurs d’activité, etc. 
-Je peux également vous aider à sélectionner vos prestataires et vous accompagner dans le déploiement de leurs services, avec pour but ultime de garantir une optimisation non seulement opérationnelle, mais aussi financière de votre cabinet.
-
-
-# Former vos équipes
-
-## Pourquoi former vos collaborateurs ?
-Dans un environnement professionnel en constante évolution, attirer, fidéliser et motiver votre personnel est essentiel. 
-La formation permet à vos collaborateurs d’être plus performants dans leurs missions, de maîtriser les outils à leur disposition et de mieux comprendre les enjeux de leur travail, ce qui se traduit souvent par une amélioration de la productivité et, à terme, des résultats du cabinet.
-Sana Consult est un organisme de formation agréé enregistré sous le numéro 84380914338.  ( Cet enregistrement ne vaut pas agrément de l’Etat ) 
-Certaines formations peuvent bénéficier d’une prise en charge partielle ou totale par l'OPCO-EP, comme le module « Secrétaires : Appréhender le monde ophtalmologique ». 
-D’autres, comme « Mise en place de procédure de recouvrement de vos impayés CPAM », ne sont pas éligibles à cette prise en charge.
-Des modules personnalisés sont également disponibles, contactez-nous pour plus de détails.
 

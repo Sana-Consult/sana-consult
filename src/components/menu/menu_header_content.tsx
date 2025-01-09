@@ -164,6 +164,7 @@ const RenderMenuBig: FC<PropsMenuRender> =({className_box, style_box, box, cell,
 		<div className={"flex"}>
 			<GoHome style_box={box} style_cell={cell}/>
 			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
+			<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
 			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
 		</div>
 		<DropdownRegionsBig/>
@@ -176,7 +177,9 @@ const RenderMenuSmall: FC<PropsMenuRender> =({className_box, style_box, box, cel
 	const { lang } = useContext(RegionContext);
 	return <Box className={className_box} style={style_box}>
 		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
+		<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
 		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+
 		{/* offset={(height_header) * 0.75 + "px" cette phrase n'est pas très propre comme code */}
 		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.75 + "px"} 
 										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");

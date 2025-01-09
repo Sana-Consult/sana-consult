@@ -1,7 +1,7 @@
 /**
- * Render Contact
- * 2023-2024
- * v 0.0.2
+ * Render Support
+ * 2025-2025
+ * v 0.0.1
  * 
  * */
 
@@ -31,11 +31,11 @@ const style_image = {
   borderRadius: "10px",
 }
 
-export const RenderAbout: FC<Props> =() => {
+export const RenderSupport: FC<Props> =() => {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "about"}}}) {
+        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "support"}}}) {
           edges {
             node {
               frontmatter {

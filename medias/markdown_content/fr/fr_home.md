@@ -9,16 +9,21 @@ lang: "fr"
 ---
 \
 &nbsp;
-Vous êtes débordé par la gestion quotidienne de votre cabinet d'ophtalmologie ?
-Quand il s'agit de tâches hors de votre domaine de compétence médicale, telles que le management et la mise en place de processus, cela peut sembler complexe. 
-Ces aspects n'ont pas été couverts dans votre formation médicale, ce qui est parfaitement compréhensible !
-Entre les rendez-vous, la coordination de l'équipe et la paperasse administrative, il est facile de se sentir submergé.
-Pourtant, une organisation efficace et une gestion optimisée sont essentielles non seulement pour offrir un service de qualité à vos patients, mais aussi pour maintenir un cabinet prospère.
-Sana Consult vous accompagne dans la mise en place de solutions pratiques pour améliorer l'efficacité de votre équipe, optimiser votre temps et alléger la charge administrative. 
-Cela vous permet de vous concentrer sur l'essentiel : l’équilibre de votre structure et la qualité des soins prodigués à vos patients, tout en favorisant un retour sur investissement rapide pour votre cabinet.
+**Gagnez en sérénité, boostez vos résultats**
 \
 \
 &nbsp;
-- Gagnez en sérénité, boostez vos résultats.
-- Optimisez votre temps.
-- Simplifiez la gestion de votre centre.
+Vous êtes submergé par la gestion quotidienne de votre cabinet d’ophtalmologie ? Entre consultations, coordination d’équipe et paperasse administrative, il est facile de perdre de vue l’essentiel : vos patients.
+\
+\
+&nbsp;
+Chez **SanaConsult**, nous simplifions la gestion de votre cabinet pour que vous puissiez vous recentrer sur votre expertise médicale. Grâce à des solutions personnalisées et efficaces, nous vous aidons à :
+\
+\
+&nbsp;
+- •	Optimiser votre temps.
+- •	Simplifier vos processus administratifs.
+- •	Améliorer l’efficacité de votre équipe.
+\
+&nbsp;
+**Notre mission ?** Vous offrir les clés d’un cabinet mieux organisé, plus performant et plus serein. Avec une gestion allégée et des processus optimisés, vos patients bénéficient d’une qualité de soins incomparable, et vous d’un retour sur investissement rapide.
