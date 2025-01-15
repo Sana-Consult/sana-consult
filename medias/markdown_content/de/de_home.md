@@ -9,16 +9,21 @@ lang: "de"
 ---
 \
 &nbsp;
-Sind Sie mit der täglichen Verwaltung Ihrer Augenarztpraxis überfordert?
-Wenn es sich dabei um Aufgaben außerhalb Ihres medizinischen Fachgebiets handelt, wie z. B. Management und die Einführung von Prozessen, kann dies komplex erscheinen. 
-Diese Aspekte wurden in Ihrer medizinischen Ausbildung nicht abgedeckt, was durchaus verständlich ist!
-Zwischen Terminen, der Koordination des Teams und dem Papierkram der Verwaltung kann man sich leicht überfordert fühlen.
-Eine effiziente Organisation und ein optimiertes Management sind jedoch nicht nur für einen hochwertigen Service für Ihre Patienten, sondern auch für die Aufrechterhaltung einer erfolgreichen Praxis von entscheidender Bedeutung.
-Sana Consult unterstützt Sie bei der Einführung praktischer Lösungen, um die Effizienz Ihres Teams zu steigern, Ihre Zeit zu optimieren und die Verwaltungslast zu verringern. 
-So können Sie sich auf das Wesentliche konzentrieren: das Gleichgewicht Ihrer Struktur und die Qualität der Versorgung Ihrer Patienten, während Sie gleichzeitig einen schnellen Return on Investment für Ihre Praxis fördern.
+**Gewinnen Sie Gelassenheit, steigern Sie Ihre Ergebnisse**
 \
 \
 &nbsp;
-- Gewinnen Sie mehr Gelassenheit, steigern Sie Ihre Ergebnisse.
-- Optimieren Sie Ihre Zeit.
-- Vereinfachen Sie die Verwaltung Ihres Zentrums.
+Sind Sie von der täglichen Verwaltung Ihrer augenärztlichen Praxis überfordert? Zwischen Konsultationen, Teamkoordination und administrativem Papierkram ist es leicht, das Wesentliche aus den Augen zu verlieren: Ihre Patienten.
+\
+\
+&nbsp;
+Bei **SanaConsult** vereinfachen wir die Verwaltung Ihrer Praxis, damit Sie sich wieder auf Ihre medizinische Expertise konzentrieren können. Mit personalisierten und effektiven Lösungen helfen wir Ihnen dabei:
+\
+\
+&nbsp;
+- •	Ihre Zeit zu optimieren.
+- •	Ihre administrativen Prozesse zu vereinfachen.
+- •	Die Effizienz Ihres Teams zu verbessern.
+\
+&nbsp;
+Unsere Mission? Ihnen die Schlüssel für eine besser organisierte, leistungsfähigere und ruhigere Praxis zu geben. Mit einer erleichterten Verwaltung und optimierten Prozessen profitieren Ihre Patienten von unvergleichlicher Pflegequalität, Ihren Gewinn steigern können

@@ -5,9 +5,7 @@ subtitle: "Membre de l'association"
 categorie : "legal"
 lang: "fr"
 ---
-Sana Consult enregistré sous le numéro 84380914338. 
-
-Cet enregistrement ne vaut pas agrément de l’État
+Sana Consult enregistré sous le numéro 84380914338. Cet enregistrement ne vaut pas agrément de l’État
 
 Société : Sana Consult - adressse à compléter
 

@@ -9,16 +9,21 @@ lang: "en"
 ---
 \
 &nbsp;
-Are you overwhelmed by the day-to-day running of your ophthalmology practice?
-When it comes to tasks outside your area of medical expertise, such as management and setting up processes, it can seem complex. 
-These aspects were not covered in your medical training, which is perfectly understandable!
-Between appointments, team coordination and administrative paperwork, it's easy to feel overwhelmed.
-Yet efficient organisation and optimised management are essential not only to providing a quality service to your patients, but also to maintaining a thriving practice.
-Sana Consult can help you implement practical solutions to improve your team's efficiency, optimise your time and lighten the administrative load. 
-This allows you to focus on what's most important: the balance of your structure and the quality of the care your patients receive, while promoting a rapid return on investment for your practice.
+**Gain Peace of Mind, Boost Your Results**
 \
 \
 &nbsp;
-- Gain peace of mind, boost your results.
-- Optimise your time.
-- Simplify the management of your centre.
+Are you overwhelmed by the daily management of your ophthalmology practice? Between consultations, team coordination, and administrative paperwork, it's easy to lose focus on what truly matters: your patients.
+\
+\
+&nbsp;
+At **SanaConsult**, we simplify the management of your practice so you can refocus on your medical expertise. Through personalized and efficient solutions, we help you:
+\
+\
+&nbsp;
+- •	Optimize your time.
+- •	Simplify your administrative processes.
+- •	Enhance your team's efficiency.
+\
+&nbsp;
+Our mission? To provide you with the tools for a more organized, high-performing, and serene practice. With streamlined management and optimized processes, your patients receive unparalleled quality care, and you achieve a quick return on investment.

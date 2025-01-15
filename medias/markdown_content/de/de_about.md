@@ -7,4 +7,19 @@ message: ""
 misc: ""
 lang: "de"
 ---
-Ich habe Sana Consult mit einer klaren Absicht gegründet: Ich möchte Ihnen dabei helfen, Ihrem Team und den Patienten außergewöhnliche Erlebnisse zu bieten und gleichzeitig die Leistungsfähigkeit Ihrer Praxis zu verbessern. Durch meinen Werdegang, u. a. in der Luftfahrtbranche und im Kundenservice, habe ich besondere Fachkenntnisse in den Bereichen Management und Servicequalität entwickelt. Diese Kompetenzen sind auch im medizinischen Bereich ein Hebel, der nicht nur die Qualität des Empfangs und des Service, sondern in Folge auch die wirtschaftliche Effizienz Ihrer Praxis verbessern wird. Seit 2009 habe ich die Welt der Augenheilkunde für mich entdeckt. Durch Projekte in vielen Augenkliniken in ganz Frankreich habe ich ein tiefes Verständnis für die Bedürfnisse von Patienten und Mitarbeitern entwickelt. Mein Ansatz konzentriert sich auf das Zuhören, das Antizipieren von Erwartungen und das Erarbeiten von Lösungen, deren Implementation einen echten Mehrwert für Ihre Praxis darstellen wird. Ich bin regelmäßig Rednerin auf dem ESCRS-Jahreskongress im Rahmen des LBI-Programms (Leadership and Business Innovation), wo ich Augenärzte und ihre Teams mit meinem Fachwissen unterstütze. Heute stelle ich diese reiche Erfahrung in den Dienst von Arztpraxen, mit der Aufgabe, das Leben der Ärzte zu erleichtern, die Beziehungen zu den Mitarbeitern aufzuwerten und das Vertrauen der Patienten zu stärken. Jede Praxis ist einzigartig und verdient eine persönliche Betreuung, die auf die Optimierung von Prozessen, die Verbesserung der Behandlungsqualität und auf die Entwicklung Ihrer Struktur ausgerichtet ist. Ich weiß, dass der Erfolg einer Praxis von der Kompetenz und dem Engagement ihrer Teams abhängt. Ich werde mich jeden Tag bemühen, Ihnen mit Sana Consult das Beste aus meinem Fachwissen zu bieten. Danke, dass Sie Teil dieses Abenteuers sind. Lassen Sie uns gemeinsam ihre Praxis weiterentwickeln!
+\
+&nbsp;
+**Ihr Partner für medizinische und organisatorische Exzellenz**
+\
+&nbsp;
+Seit 2024 begleitet **SanaConsult** Fachärzte für Augenheilkunde bei der Weiterentwicklung und Optimierung ihrer Praxen. Dieses Abenteuer basiert auf einer Expertise, die seit 2009 aufgebaut wurde, als ich die faszinierende Welt der Ophthalmologie entdeckte.
+\
+\
+&nbsp;
+**Warum uns wählen?**
+- •	**Einzigartiger Werdegang:** Vielseitige Erfahrungen in für exzellenten Service bekannten Branchen wie Luftfahrt und Autovermietung, angepasst an medizinische Bedürfnisse.
+- •	**International renommierte Expertise:** Regelmäßige Beiträge beim ESCRS-Kongress zum Austausch bewährter Verfahren in den Bereichen Führung und Innovation.
+- •	**Individueller Ansatz:** Jede Praxis ist einzigartig. Unsere Lösungen sind es auch. Sie sind darauf ausgelegt, Ihre Teams zu stärken, Patienten zu binden und Ihre Ergebnisse zu verbessern.
+\
+&nbsp;
+Mit **SanaConsult**verwandeln Sie Herausforderungen in Chancen und schreiben ein neues Erfolgskapitel für Ihre Praxis.

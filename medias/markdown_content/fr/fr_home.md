@@ -26,4 +26,4 @@ Chez **SanaConsult**, nous simplifions la gestion de votre cabinet pour que vous
 - •	Améliorer l’efficacité de votre équipe.
 \
 &nbsp;
-**Notre mission ?** Vous offrir les clés d’un cabinet mieux organisé, plus performant et plus serein. Avec une gestion allégée et des processus optimisés, vos patients bénéficient d’une qualité de soins incomparable, et vous d’un retour sur investissement rapide.
+Notre mission ? Vous offrir les clés d’un cabinet mieux organisé, plus performant et plus serein. Avec une gestion allégée et des processus optimisés, vos patients bénéficient d’une qualité de soins incomparable, et vous d’un retour sur investissement rapide.
