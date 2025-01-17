@@ -60,15 +60,21 @@ export const RenderAbout: FC<Props> =() => {
 
   return <>
   <h4>{info.title}</h4>
-    {/* <h4>{info.subtitle}</h4>
+    <h4>{info.subtitle}</h4>
     <div>
-      <StaticImage 	style={style_image} src="./../../medias/visuel/celine_reibel_portrait.jpg" alt="Céline Reibel" 
+      <StaticImage 	style={style_image} src="./../../medias/visuel/celine_reibel_portrait.jpg" alt="Bloc opératoir" 
                         placeholder="blurred" layout="constrained"
                         />
     </div>
-    <a href="https://www.studiolecarre.com/" target="_blank">Photo : Studio le carré</a>  */}
+    <a href="https://www.studiolecarre.com/" target="_blank">Photo : Studio le carré</a> 
     <p style={paragraphe_styles}>
       <MarkdownHtml html={html} />
     </p>
+    <div>
+      <StaticImage 	style={style_image} src="./../../medias/visuel/bloc_op.jpg" alt="Bloc opératoir" 
+                        placeholder="blurred" layout="constrained"
+                        />
+    </div>
+    <h6>Photo : Étienne Duvernay</h6>
   </>
 }

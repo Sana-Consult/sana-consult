@@ -16,7 +16,6 @@ Eine anfängliche Analyse Ihrer Prozesse hilft dabei, Verbesserungspotentiale zu
 - •	Patientenservice.
 - •	Wirtschaftliche Leistung.
 \
-\
 &nbsp;
 ### Unterstützung bei der Veränderung
 Nach der Analyse begleiten wir Sie Schritt für Schritt bei der Optimierung Ihrer Praxis:
@@ -26,7 +25,6 @@ Nach der Analyse begleiten wir Sie Schritt für Schritt bei der Optimierung Ihre
 - • Verfolgung von Leistungskennzahlen (Key Performance Indicators) zur Messung Ihrer Fortschritte.
 - • Suche und Auswahl qualifizierter Dienstleister, die Ihren spezifischen Bedürfnissen entsprechen, sei es für technologische Lösungen, administrative Dienste oder andere Bereiche.
 - • Implementierung und Bereitstellung eines CRM-Systems, das an Ihre Praxis angepasst ist, um die Patientenverwaltung zu optimieren, die interne Kommunikation zu verbessern und die Leistung übersichtlicher zu gestalten.
-
 \
 &nbsp;
 ### Schulung Ihrer Teams

@@ -166,6 +166,7 @@ const RenderMenuBig: FC<PropsMenuRender> =({className_box, style_box, box, cell,
 			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 			<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
 			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+			<NavCellBox to="/client" style_box={box} style_cell={cell}>{tree[lang].customer}</NavCellBox>
 		</div>
 		<DropdownRegionsBig/>
 	</>
@@ -179,6 +180,7 @@ const RenderMenuSmall: FC<PropsMenuRender> =({className_box, style_box, box, cel
 		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 		<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
 		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+		<NavCellBox to="/client" style_box={box} style_cell={cell}>{tree[lang].customer}</NavCellBox>
 
 		{/* offset={(height_header) * 0.75 + "px" cette phrase n'est pas très propre comme code */}
 		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.75 + "px"} 

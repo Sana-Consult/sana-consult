@@ -16,7 +16,6 @@ Un audit initial permet d’analyser vos processus, d’identifier les points à
 - •	Le parcours patient.
 - •	La performance économique.
 \
-\
 &nbsp;
 ### Vous accompagner dans le changement
 Après l’audit, nous vous guidons pas à pas dans l’optimisation de votre cabinet :
@@ -33,10 +32,6 @@ Renforcez les compétences de vos collaborateurs grâce à des modules de format
 - •	Gestion des rendez-vous et accueil des patients.
 - •	Optimisation des processus administratifs.
 - •	Techniques spécifiques en ophtalmologie, telles que la prise en charge des impayés CPAM.
-\
-&nbsp;
-**SanaConsult est un organisme de formation agréé**, enregistré sous le numéro **84380914338** (cet enregistrement ne vaut pas agrément de l’État).
-\
 \
 &nbsp;
 **Des modules personnalisés sont également disponibles.** Contactez-nous pour discuter de vos besoins spécifiques et découvrir les solutions adaptées à votre équipe.

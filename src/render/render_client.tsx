@@ -12,8 +12,8 @@ import { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 // APP
 import { useNode, get_css_value } from "../utils/hu.tsx";
-import { MarkdownHtml } from "../components/hc.tsx";
-import { RegionContext } from "./../context";
+import { MarkdownHtml, GridLogo } from "../components/hc.tsx";
+import { RegionContext } from "../context.tsx";
 
 // need to define properly the any... it's very too much and very lazy !
 interface Props {
@@ -24,17 +24,17 @@ const paragraphe_styles = {
   marginBottom: "0.5em",
 }
 
-const style_image = {
-  maxWidth: "300px",
-  border: "2px solid " +get_css_value("--color_border"),
-  borderRadius: "10px",
-}
+// const style_image = {
+//   maxWidth: "300px",
+//   border: "2px solid " +get_css_value("--color_border"),
+//   borderRadius: "10px",
+// }
 
-export const RenderSupport: FC<Props> =() => {
+export const RenderClient: FC<Props> =() => {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "support"}}}) {
+        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "client"}}}) {
           edges {
             node {
               frontmatter {
@@ -56,11 +56,13 @@ export const RenderSupport: FC<Props> =() => {
   const { lang } = useContext(RegionContext);
   const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter;
+  // console.log("info", info);
 
   return <>
   <h4>{info.title}</h4>
-    <p style={paragraphe_styles}>
+    <GridLogo/>
+    {/* <p style={paragraphe_styles}>
       <MarkdownHtml html={html} />
-    </p>
+    </p> */}
   </>
 }

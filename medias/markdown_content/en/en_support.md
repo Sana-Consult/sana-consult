@@ -16,7 +16,6 @@ An initial audit analyzes your processes, identifies areas for improvement, and 
 - •	The patient journey.
 - •	Economic performance.
 \
-\
 &nbsp;
 ### Support You Through Change
 Following the audit, we guide you step by step in optimizing your practice:
@@ -26,7 +25,6 @@ Following the audit, we guide you step by step in optimizing your practice:
 - •	Monitoring KPIs to track your progress.
 - •	Sourcing and selecting qualified providers to meet your specific needs, whether for technological solutions, administrative services, or others.
 - •	Implementing and deploying a CRM system tailored to your practice to optimize patient management, improve internal communication, and facilitate performance tracking.
-
 \
 &nbsp;
 ### Train Your Teams

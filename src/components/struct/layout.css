@@ -153,6 +153,7 @@ h5 {
 }
 
 h6 {
+  color:var(--color_text_current);
   font-size: 0.7em;
 }
 
