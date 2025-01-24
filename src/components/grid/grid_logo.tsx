@@ -15,10 +15,13 @@ import { get_css_value } from "../../utils/hu.tsx";
 
 
 const style_image = {
-  // maxWidth: "300px",
   border: "2px solid " +get_css_value("--color_border"),
   borderRadius: "10px",
 }
+
+// const style_vignette = {
+//   maxWidth: "300px",
+// }
 
 
 function build_list(edges : any, list : any) {
@@ -53,7 +56,15 @@ interface PropsVignette {
 
 const Vignette: FC<PropsVignette> = (elem, index) => {
   // je ne comprends pas pourquoi je dois écrire elem.elem pur rentrer dans l'élément
-  return elem !== null? <div style={style_image}><GatsbyImage image={elem.elem.node.childImageSharp.gatsbyImageData} alt={String(index)}/></div> : <></>;
+  return elem !== null?
+    <div>
+    {/* <div style={style_vignette}> */}
+      <div style={style_image}>
+        <GatsbyImage image={elem.elem.node.childImageSharp.gatsbyImageData} alt={String(index)}/>
+      </div>
+      <p>{elem.elem.node.name}</p>
+    </div> : 
+    <></>;
 }
 
 

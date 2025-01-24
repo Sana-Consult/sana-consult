@@ -1,6 +1,6 @@
 ---
 menu: "client"
-title: "Clients"
+title: "Klienten"
 subtitle: ""
 categorie : "client"
 message: ""

@@ -59,10 +59,11 @@ export const RenderClient: FC<Props> =() => {
   // console.log("info", info);
 
   return <>
-  <h4>{info.title}</h4>
+    <h4>{info.title}</h4>
     <GridLogo/>
-    {/* <p style={paragraphe_styles}>
+    <p style={paragraphe_styles}>
       <MarkdownHtml html={html} />
-    </p> */}
+    </p>
+
   </>
 }
