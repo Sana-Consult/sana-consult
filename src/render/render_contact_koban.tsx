@@ -100,7 +100,6 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
       if (typeof RegForm === "function") {
         // @ts-ignore on ignore royalement
         RegForm("673c8049e856d6e37967884b");
-        console.log("Je suis en Forme");
       }
     };
 
@@ -119,7 +118,6 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
       }
     });
 
-    // je mets ça ou ?
     observer.observe(document.body, {
       childList: true,
       subtree: true,
@@ -130,7 +128,6 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
     return () => {
       document.body.removeChild(script);
       // on a détecté la fenêtre, maintenant on nettoie la piste de danse
-      // window.removeEventListener('load', handleKobanPopout);
       observer.disconnect()
     };
   }, []);
@@ -140,11 +137,12 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
       data-kbnzone="true"
       data-id="1"
       // className="kbnzone kbn-zone"
-      id="kbnzone-1"
+      // id="kbnzone-1"
       data-formcode="[[!FORM;673c8049e856d6e37967884b;Contact Web]]"
     >
         <div data-elem="form">
-          <form id="ncform">
+        <form style={{backgroundColor : "yellow", maxWidth: "100%"}}>
+          {/* <form id="ncform"> */}
             <p>{info.misc}</p>
                 <FormInput
                   info={info.lastname}
@@ -224,125 +222,6 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
         </div>
     </div>
   );
-  // return (
-  //   <div
-  //     data-kbnzone="true"
-  //     data-id="1"
-  //     className="kbnzone kbn-zone"
-  //     id="kbnzone-1"
-  //     data-formcode="[[!FORM;673c8049e856d6e37967884b;Contact Web]]"
-  //   >
-  //     <div className="row">
-  //       <div className="col-md-12" data-elem="form">
-  //         <form id="ncform">
-  //           <p>{info.misc}</p>
-  //           <div className="row">
-  //             <div className="col-md-12">
-  //               <FormInput
-  //                 info={info.lastname}
-  //                 id="673c8c07e856d6e379678b3c"
-  //                 aria_label="Nom/Name"
-  //                 name="contact_name"
-  //                 type="text"
-  //               />
-  //             </div>
-  //           </div>
-  //           <div className="row">
-  //             <div className="col-md-12">
-  //               <FormInput
-  //                 info={info.firstname}
-  //                 id="673c8c0be856d6e379678b3f"
-  //                 aria_label="Prénom/First name"
-  //                 name="contact_firstname"
-  //                 type="text"
-  //               />
-  //             </div>
-  //           </div>
-  //           <div className="row">
-  //             <div className="col-md-12">
-  //               <FormInput
-  //                 info={info.mail}
-  //                 id="677262ad6603ee6ab902d412"
-  //                 aria_label="EMail"
-  //                 name="contact_email"
-  //                 type="email"
-  //                 pattern="[^ @]*@[^ @]*"
-  //               />
-  //             </div>
-  //           </div>
-  //           <div className="row">
-  //             <div className="col-md-12">
-  //               <FormInput
-  //                 info={info.mobile}
-  //                 id="677262b26603ee6ab902d413"
-  //                 aria_label="Mobile"
-  //                 name="contact_mobile"
-  //                 type="text"
-  //               />
-  //             </div>
-  //           </div>
-  //           <div className="row">
-  //             <div className="col-md-12">
-  //               <FormInput
-  //                 info={info.town}
-  //                 id="677263296603ee6ab902d41b"
-  //                 aria_label="Ville/Town"
-  //                 name="third_adrscity"
-  //                 type="text"
-  //               />
-  //             </div>
-  //           </div>
-  //           <div className="row">
-  //             <div className="col-md-12">
-  //               <div className="ncFieldct cti6772632e6603ee6ab902d41c tp">
-  //                 <label htmlFor="6772632e6603ee6ab902d41c">
-  //                   {info.country}
-  //                 </label>
-  //                 <SelectLanguage />
-  //                 <span
-  //                   id="error-6772632e6603ee6ab902d41c"
-  //                   className="error-message"
-  //                   aria-live="polite"
-  //                 ></span>
-  //               </div>
-  //             </div>
-  //           </div>
-  //           <div className="row">
-  //             <div className="col-md-12">
-  //               <div className="ncFieldct cti677263876603ee6ab902d45d tp">
-  //                 <label htmlFor="677263876603ee6ab902d45d">
-  //                   Message<span className="required">*</span>
-  //                 </label>
-  //                 <div className="ncField">
-  //                   <textarea
-  //                     data-fid="677263876603ee6ab902d45d"
-  //                     name="contact_comment"
-  //                     // rows="5"
-  //                     id="677263876603ee6ab902d45d"
-  //                     required
-  //                     aria-required="true"
-  //                     aria-label="Message"
-  //                   ></textarea>
-  //                 </div>
-  //                 <span
-  //                   id="error-677263876603ee6ab902d45d"
-  //                   className="error-message"
-  //                   aria-live="polite"
-  //                 ></span>
-  //               </div>
-  //             </div>
-  //           </div>
-  //           <Newsletter info={info.newsletter}/>
-  //           <Send info={info.send} style_box={style_box} style_cell={style_cell}/>
-  //         </form>
-  //         <link
-  //           rel="stylesheet"
-  //           href="https://track-eu01.app-koban.com/Form/Style/673c8049e856d6e37967884b"
-  //         />
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 };
 
 
@@ -368,8 +247,10 @@ const FormInput: FC<PropsFormInput> = ({
   return (
     <div className={"ncFieldct cti" + { id } + " tp"}>
       <label htmlFor={id}>{info}</label>
-      <div className="ncField">
+      <div style={{backgroundColor : "cyan", maxWidth: "100%"}}>
+      {/* <div className="ncField"> */}
         <input
+        style={{backgroundColor : "magenta", maxWidth: "100%"}}
           type={type}
           data-fid={id}
           name={name}
