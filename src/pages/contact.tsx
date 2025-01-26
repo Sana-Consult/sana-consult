@@ -9,7 +9,7 @@ import React, { FC } from "react";
 import type { HeadFC, PageProps } from "gatsby"
 // APP
 
-import { RenderContact, RenderContactKoban } from "../render/hr.tsx"
+import { RenderContactKoban } from "../render/hr.tsx"
 import { Layout } from "../components/hc.tsx";
 import { get_css_value } from "../utils/hu.tsx";
 
@@ -45,4 +45,4 @@ const Contact: FC<PageProps> = () => {
 
 export default Contact;
 
-export const Head: HeadFC = () => <title>Sana Consult</title>
+export const Head: HeadFC = () => <title>Sana Consult : Contact</title>
