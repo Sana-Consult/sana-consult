@@ -9,7 +9,7 @@ import React, { FC } from "react";
 import type { HeadFC, PageProps } from "gatsby"
 // APP
 
-import { RenderContactKoban } from "../render/hr.tsx"
+import { RenderContact } from "../render/hr.tsx"
 import { Layout } from "../components/hc.tsx";
 import { get_css_value } from "../utils/hu.tsx";
 
@@ -36,7 +36,7 @@ const Contact: FC<PageProps> = () => {
   }
   return (
     <Layout>
-      <RenderContactKoban  style_box={style_box}
+      <RenderContact  style_box={style_box}
                       style_cell={style_cell}
                       style_form={style_form}/>
     </Layout>
