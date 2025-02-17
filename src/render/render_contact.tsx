@@ -201,22 +201,25 @@ const TextArea: FC<PropsTextArea> = ({
   id,
 }) => {
   return (
-    <div className={"cti"+{id}+" tp"}>
-                    <textarea
-                      data-fid={id}
-                      name="contact_comment"
-                      id={id}
-                      required
-                      aria-required="true"
-                      aria-label="Message"
-                      placeholder={info}
-                    ></textarea>
-                  <span
-                    id={"error-"+{id}}
-                    className="error-message"
-                    aria-live="polite"
-                  ></span>
-                </div>
+    <div className={"cti"+{id}+" tp"} role="group" aria-labelledby={`label-${id}`}>
+      <label id={`label-${id}`} htmlFor={id} className="sr-only">{info}</label>
+      <textarea
+        data-fid={id}
+        name="contact_comment"
+        id={id}
+        required
+        aria-required="true"
+        aria-label={info}
+        aria-describedby={`error-${id}`}
+        placeholder={info}
+      ></textarea>
+      <span
+        id={`error-${id}`}
+        className="error-message"
+        role="alert"
+        aria-live="assertive"
+      ></span>
+    </div>
   )
 }
 
@@ -242,26 +245,27 @@ const FormInput: FC<PropsFormInput> = ({
   pattern,
 }) => {
   return (
-    <div>
+    <div role="group" aria-labelledby={`label-${id}`}>
       <div className={"cti" + { id } + " tp"}>
-        <div>
-          <input
-            type={type}
-            data-fid={id}
-            name={name}
-            id={id}
-            pattern={pattern}
-            required
-            aria-required="true"
-            aria-label={aria_label}
-            data-lpignore="true"
-            placeholder={info}
-          />
-        </div>
+        <label id={`label-${id}`} htmlFor={id} className="sr-only">{info}</label>
+        <input
+          type={type}
+          data-fid={id}
+          name={name}
+          id={id}
+          pattern={pattern}
+          required
+          aria-required="true"
+          aria-label={aria_label}
+          aria-describedby={`error-${id}`}
+          data-lpignore="true"
+          placeholder={info}
+        />
         <span
-          id={"error-" + { id }}
+          id={`error-${id}`}
           className="error-message"
-          aria-live="polite"
+          role="alert"
+          aria-live="assertive"
         ></span>
       </div>
     </div>

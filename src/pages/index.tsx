@@ -23,13 +23,14 @@ import type { HeadFC, PageProps } from "gatsby"
 // APP
 import { RenderHome, RenderAbout } from "./../render/hr.tsx"
 import { Layout } from "./../components/hc.tsx";
+import { SEO } from "../components/seo"
 
 // Try to add meta to disable auto translate from safari and google
 // https://medium.com/yellowcode/how-to-do-meta-tags-in-gatsbyjs-45245dc68ab9
 
 const IndexPage: FC<PageProps> = () => {
   return (
-    <div >
+    <div>
       <Layout>
         <RenderHome/>
       </Layout>
@@ -39,4 +40,16 @@ const IndexPage: FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Sana Consult</title>
+export const Head: HeadFC = () => (
+  <SEO 
+    title="Sana Consult - Optimisation des cabinets d'ophtalmologie"
+    description="Cabinet de conseil spécialisé dans l'optimisation des cabinets d'ophtalmologie. Expertise en gestion, organisation et formation."
+    lang="fr"
+    meta={[
+      {
+        name: "keywords",
+        content: "ophtalmologie, conseil, optimisation cabinet, gestion cabinet médical, formation médicale"
+      }
+    ]}
+  />
+)

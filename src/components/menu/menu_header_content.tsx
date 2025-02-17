@@ -13,6 +13,7 @@ import { get_css_value } from "../../utils/hu.tsx";
 import tree from "./../../../medias/tree.json";
 import { RegionContext, HeaderContext } from "../../context.tsx";
 
+type ValidLang = 'fr' | 'en' | 'de';
 
 //////////////////////////
 // MENU REGION
@@ -37,7 +38,19 @@ const Cell: FC<PropsCell> =({className_box, style_box, className_cell, style_cel
 	}
 
 	return <Box className={className_box} style={style_box}>
-		<div className={className_cell} style={style_cell} onClick={mouse_click}>
+		<div 
+			className={className_cell} 
+			style={style_cell} 
+			onClick={mouse_click}
+			role="button"
+			tabIndex={0}
+			onKeyPress={(e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					mouse_click(e);
+				}
+			}}
+			aria-label={`Changer la langue vers ${children}`}
+		>
 			{children}
 		</div>
 	</Box>
@@ -82,13 +95,15 @@ export const Region: FC<PropsRegion> =({style_box, style_cell, offset}) =>{
 	// 	(lang as unknown) as string;
 	// }
 
-	return <Dropdown 	name={tree[lang].lang[lang]}
+	type ValidLang = 'fr' | 'en' | 'de';
+	return <Dropdown name={tree[lang as ValidLang].lang[lang as ValidLang]}
 										style_box={style_box} style_cell={style_cell} 
 										offset={offset}
-										is={lang_db_is} 
+										is={lang_db_is ?? false} 
 										set_is={set_lang_db_is}>
-		<MenuRegion style_box={style_box} style_cell={style_cell} 
-								values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} />
+		<MenuRegion style_box={style_box} style_cell={style_cell}
+		values={Object.values(tree[lang as ValidLang].lang)}
+		keys={Object.keys(tree[lang as ValidLang].lang) as unknown as []} index={0} children={undefined} />
 	</Dropdown>
 }
 
@@ -151,40 +166,35 @@ interface PropsMenuRender extends PropsMenu {
 }
 
 const RenderMenuBig: FC<PropsMenuRender> =({className_box, style_box, box, cell, height_header}) => {
-	let { lang } = useContext(RegionContext);
+	const { lang } = useContext(RegionContext);
 
-	const shadow_style = {
-		boxShadow : "0 -15em 1em 15em " +get_css_value("--color_shadow"),
-	}
-	const shadow_dropdown_style = Object.assign({}, shadow_style, box);
-	
-	// Je ne trouve pas le moyen d'éviter le null et donc l'erreur avec "lang"
-	// voir ligne 70
 	return <>
-		<div className={"flex"}>
+		<nav aria-label="Menu principal" className="flex">
 			<GoHome style_box={box} style_cell={cell}/>
-			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
-			<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
-			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
-			<NavCellBox to="/client" style_box={box} style_cell={cell}>{tree[lang].customer}</NavCellBox>
-		</div>
+			<NavCellBox to="/about" style_box={box} style_cell={cell} aria-label={tree[lang as ValidLang].about}>{tree[lang as ValidLang].about}</NavCellBox>
+			<NavCellBox to="/support" style_box={box} style_cell={cell} aria-label={tree[lang as ValidLang].support}>{tree[lang as ValidLang].support}</NavCellBox>
+			<NavCellBox to="/contact" style_box={box} style_cell={cell} aria-label={tree[lang as ValidLang].contact}>{tree[lang as ValidLang].contact}</NavCellBox>
+			<NavCellBox to="/client" style_box={box} style_cell={cell} aria-label={tree[lang as ValidLang].customer}>{tree[lang as ValidLang].customer}</NavCellBox>
+		</nav>
 		<DropdownRegionsBig/>
 	</>
 }
 
 const RenderMenuSmall: FC<PropsMenuRender> =({className_box, style_box, box, cell, height_header}) => {
-	// Je ne trouve pas le moyen d'éviter le null et donc l'erreur avec "lang"
-	// voir ligne 70
 	const { lang } = useContext(RegionContext);
+	
 	return <Box className={className_box} style={style_box}>
-		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
-		<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
-		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
-		<NavCellBox to="/client" style_box={box} style_cell={cell}>{tree[lang].customer}</NavCellBox>
+		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang as ValidLang].about}</NavCellBox>
+		<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang as ValidLang].support}</NavCellBox>
+		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang as ValidLang].contact}</NavCellBox>
+		<NavCellBox to="/client" style_box={box} style_cell={cell}>{tree[lang as ValidLang].customer}</NavCellBox>
 
-		{/* offset={(height_header) * 0.75 + "px" cette phrase n'est pas très propre comme code */}
-		<DropdowRegions style_box={box} style_cell={cell} offset={(height_header) * 0.75 + "px"} 
-										is={null} set_is={function (action: boolean): void {throw new Error("Function not implemented.");
-		} }/>
+		<DropdowRegions 
+			style_box={box} 
+			style_cell={cell} 
+			offset={(height_header * 0.75) + "px"}
+			is={false}
+			set_is={(value: boolean) => {}} 
+		/>
 	</Box>
 }

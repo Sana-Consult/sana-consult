@@ -1,0 +1,27 @@
+.sitemap-section {
+  margin: 2rem 0;
+}
+
+.sitemap-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.sitemap-section ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.sitemap-section ul li {
+  margin: 0.5rem 0;
+}
+
+.sitemap-section ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sitemap-section ul li a:hover {
+  color: #000;
+}

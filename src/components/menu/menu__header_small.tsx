@@ -83,12 +83,19 @@ export const MenuHeaderSmall: FC<PropsHeaderSmall> = (style_box) =>{
 		<Box style={header_box_style}>
 			<GoHome style_cell={style_go_home}/>
 			<Hamburger style_box={style_box_elem}>
-				<div id="hamburger" className={is ? `open`: ``} style={hamburger_style_cell} onClick={mouse_click}>
+				<button
+					id="hamburger"
+					type="button"
+					className={`hamburger-button ${is ? 'open' : ''}`}
+					onClick={mouse_click}
+					aria-label="Menu principal"
+					{...(is && { 'aria-controls': 'mobile-menu' })}
+				>
 					<span></span>
-  				<span></span>
-  				<span></span>
-  				<span></span>
-				</div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</Hamburger>
 		</Box>
 		{is ? <MenuHeaderContent style_box={style_box_deploy_menu} style_cell={style_cell_deploy_menu} in_line={false}/> : null}

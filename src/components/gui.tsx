@@ -17,6 +17,11 @@ import { get_css_value } from "../utils/hu.tsx";
 import { RegionContext, HeaderContext } from "./../context.tsx";
 // TAILWIND
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import './gui.css';
+import { CSSProperties } from 'react';
+
+// Define ValidLang type at the top level
+type ValidLang = 'fr' | 'en' | 'de';
 
 interface DesignProps {
   className_box?: string;
@@ -25,15 +30,17 @@ interface DesignProps {
   style_cell?: any;
 }
 
-
-
 ///////////////////
 // HAMBURGER
 ///////////////////
-export function Hamburger(props: any) {
-	return <Box className={props.className_box} style={props.style_box}>
-		{props.children}
-	</Box>
+interface HamburgerProps extends DesignProps {
+  children: ReactNode;
+}
+
+export function Hamburger(props: HamburgerProps) {
+  return <Box className={props.className_box} style={props.style_box}>
+    {props.children}
+  </Box>
 }
 
 
@@ -41,33 +48,20 @@ export function Hamburger(props: any) {
 // BUTTON
 ///////////////////
 interface ButtonProps {
-  style: {};
+  style: CSSProperties;
   what: string;
   to: string;
 }
 
-//////////////////////////
-// NAVIGATION
-////////////////////////
-
-
-// ButtonCodeNav
-////////////////
-// in progress
-///////////////
-export const ButtonCodeNav : FC<ButtonProps> = ({style, what, to}) => {
+export const ButtonCodeNav: FC<ButtonProps> = ({style, what, to}) => {
   const [is, set_is] = useState(false);
   const toggle_button = () => {
-    if (is) {
-      set_is(false);
-    } else {
-      set_is(true);
-    }
+    set_is(!is);
   }
 
   return (
     <NavCell to={to}>
-        <code onClick={() => toggle_button()} style={style}>{what}</code>
+      <code onClick={toggle_button} style={style}>{what}</code>
     </NavCell>
   )
 }
@@ -78,50 +72,38 @@ export const ButtonCodeNav : FC<ButtonProps> = ({style, what, to}) => {
 // NAVIGATION
 /////////////
 interface NavProps extends DesignProps {
-  children ?: any;
+  children?: ReactNode;
   to: string;
   className?: string;
-  style?: any;
+  style?: CSSProperties;
 }
 
-// NavCell
-//////////
 export const NavCell: FC<NavProps> = ({to, className, style, children}) => {
-	function mouse_click(event: { preventDefault: () => void; }) {
-		event.preventDefault();
-		navigate(to);
-	}
-	return <div className={className} style={style} onClick={mouse_click}>{children}</div>
+  function mouse_click(event: React.MouseEvent) {
+    event.preventDefault();
+    navigate(to);
+  }
+  return <div className={className} style={style} onClick={mouse_click}>{children}</div>
 }
 
-// NavCellBox
-//////////////
-export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, className_cell, style_cell, children}) =>{
-	return <Box className={className_box} style={style_box}>
-			<NavCell to={to} className={className_cell} style={style_cell}>{children}</NavCell>
-		</Box>
+export const NavCellBox: FC<NavProps> = ({to, className_box, style_box, className_cell, style_cell, children}) => {
+  return <Box className={className_box} style={style_box}>
+    <NavCell to={to} className={className_cell} style={style_cell}>{children}</NavCell>
+  </Box>
 }
 
-// GO HOME
-//////////////////
 export const GoHome: FC<DesignProps> = ({className_box, style_box, className_cell, style_cell}) => {
-  let h = get_css_value("--height_home_cell");
-	let w = get_css_value("--height_home_cell");
-	if(h === undefined) {
-		h = "50px";
-	}
-  if(w === undefined) {
-		w = "50px";
-	}
+  const h = get_css_value("--height_home_cell") ?? "50px";
+  const w = get_css_value("--height_home_cell") ?? "50px";
 
-	return (
+  return (
     <NavCellBox to="/" className_box={className_box} style_box={style_box} className_cell={className_cell} style_cell={style_cell}>
-        <div style={{maxWidth: w, maxHeight: h}}>
-        <StaticImage 	src="./../../medias/home.png" alt="Home" 
-                      placeholder="blurred" layout="constrained"
-                      />
+      <div style={{maxWidth: w, maxHeight: h}}>
+        <StaticImage src="./../../medias/home.png" alt="Home" 
+                    placeholder="blurred" layout="constrained"
+        />
       </div>
-	  </NavCellBox>
+    </NavCellBox>
   )
 }
 
@@ -139,106 +121,130 @@ export const GoHome: FC<DesignProps> = ({className_box, style_box, className_cel
 //////////////////
 
 interface DropdownProps extends DesignProps {
-  children ?: any;
+  children?: ReactNode;
   className?: string;
-  style?: any;
+  style?: CSSProperties;
   name?: string;
-  is: boolean | null;
+  is: boolean;
   set_is(action: boolean): void;
-  offset? : string;
+  offset?: string;
   value?: any;
 }
 
-export const Dropdown: FC<DropdownProps> = ({name,
-                                            className_box, style_box, className_cell, style_cell, offset,
-                                            is, set_is,  
-                                            children}) => {
-    const style_display = {
-      display: "flex",
-      flexDirection: "column",
-      padding: offset + " 0"
-    }
+export const Dropdown: FC<DropdownProps> = ({
+  name,
+  className_box,
+  style_box,
+  className_cell,
+  style_cell,
+  offset,
+  is,
+  set_is,
+  children
+}) => {
+  function mouse_click(event: React.MouseEvent) {
+    event.preventDefault();
+    set_is(!is);
+  }
 
-    function mouse_click(event: { preventDefault: () => void; }) {
-      event.preventDefault();
-      is ? set_is(false) : set_is(true); // context
-    }
+  function close(event: React.MouseEvent) {
+    event.preventDefault();
+    set_is(false);
+  }
 
-    // close the dropdown after use it
-    function close(event: { preventDefault: () => void; }) {
-      event.preventDefault();
-      set_is(false);
-    }
-
-    return <Box className={className_box} style={style_box}>
-      <div className={className_cell} style={style_cell} onClick={mouse_click}>{name}</div>
-      {is ? 
-      <div style={style_display} onClick={close}>
+  return <Box className={className_box} style={style_box}>
+    <div className={className_cell} style={style_cell} onClick={mouse_click}>{name}</div>
+    {is && 
+      <div 
+        className="dropdown-content" 
+        style={{ padding: `${offset} 0` } as CSSProperties} 
+        onClick={close}
+      >
         {children}
-      </div> 
-      : <></>}
-    </Box>
+      </div>
+    }
+  </Box>
 }
 
 
-export const DropdowRegions: FC<DropdownProps>= ({className_box, style_box, className_cell, style_cell, offset}) => {
-	const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
-	const { lang } = useContext(RegionContext);
+export const DropdowRegions: FC<DropdownProps> = ({className_box, style_box, className_cell, style_cell, offset}) => {
+  const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
+  const { lang } = useContext(RegionContext);
+  const safeLang = (lang ?? 'fr') as ValidLang;
 
-	return <Dropdown 	name={tree[lang].lang[lang]}
-										style_box={style_box} style_cell={style_cell} 
-										offset={offset}
-										is={lang_db_is} set_is={set_lang_db_is}>
-		<SelectRegions  style_box={style_box} 
-                    style_cell={style_cell}
-                    region = {lang}
-								    values={Object.values(tree[lang].lang)} 
-                    keys={Object.keys(tree[lang].lang)} />
-	</Dropdown>
+  return <Dropdown name={tree[safeLang].lang[safeLang]}
+                  style_box={style_box}
+                  style_cell={style_cell} 
+                  offset={offset}
+                  is={lang_db_is ?? false}
+                  set_is={set_lang_db_is}>
+    <SelectRegions style_box={style_box} 
+                  style_cell={style_cell}
+                  region={lang}
+                  values={Object.values(tree[safeLang].lang)} 
+                  keys={Object.keys(tree[safeLang].lang)} />
+  </Dropdown>
 }
 
 interface RegionProps extends DesignProps {
-  children?: ReactNode,
-  index: number,
-  keys: string[],
+  children?: ReactNode;
+  index: number;
+  keys: string[];
 }
 
-// we cannot use key for the props because it's react reserved word
-export const Region:FC<RegionProps>= ({className_box, style_box, className_cell, style_cell, keys, index, children}) => {
-	const { set_lang } = useContext(RegionContext);
+export const Region: FC<RegionProps> = ({className_box, style_box, className_cell, style_cell, keys, index, children}) => {
+  const { set_lang } = useContext(RegionContext);
 
-	function mouse_click(event: { preventDefault: () => void; }) {
-		event.preventDefault();
-		set_lang(keys[index]);
-	}
+  function mouse_click(event: React.MouseEvent) {
+    event.preventDefault();
+    set_lang(keys[index]);
+  }
 
-	return <Box className={className_box} style={style_box}>
-		<div className={className_cell} style={style_cell} onClick={mouse_click}>
-			{children}
-		</div>
-	</Box>
+  return <Box className={className_box} style={style_box}>
+    <div 
+      className={className_cell} 
+      style={style_cell} 
+      onClick={mouse_click}
+      role="button"
+      tabIndex={0}
+      onKeyPress={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          mouse_click(e as unknown as React.MouseEvent);
+        }
+      }}
+      aria-label={`Changer la langue vers ${children}`}
+    >
+      {children}
+    </div>
+  </Box>
 }
 
 interface SelectRegionProps extends DesignProps {
-  children?: ReactNode,
-  keys: string[],
-  values?: any,
-  region : string
+  children?: ReactNode;
+  keys: string[];
+  values?: any;
+  region: string | null;
 }
 
-export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, className_cell, style_cell, region, values, keys}) => {
-	// we cannot use key for the props because it's react reserved word
-	return <>
-		{values.map((elem : any, key : number) => {
-      if(keys[key] !== region) {
-        return <Region className_box={className_box} style_box={style_box} 
-										className_cell={className_cell} style_cell={style_cell}
-										keys={keys} index={key}>
-					{elem}
-				</Region>
-      } else return <></>
-		})}
-	</>	
+export const SelectRegions: FC<SelectRegionProps> = ({className_box, style_box, className_cell, style_cell, region, values, keys}) => {
+  return <>
+    {values.map((elem: any, key: number) => {
+      if (keys[key] !== region) {
+        return <Region 
+          key={key}
+          className_box={className_box}
+          style_box={style_box} 
+          className_cell={className_cell}
+          style_cell={style_cell}
+          keys={keys}
+          index={key}
+        >
+          {elem}
+        </Region>
+      }
+      return null;
+    })}
+  </>
 }
 
 
@@ -247,13 +253,13 @@ export const SelectRegions :FC<SelectRegionProps>= ({className_box, style_box, c
 // DROPDOWN TAILWIND
 /////////////////////
 
-export const ElemRegion:FC<RegionProps>= ({keys, index, children}) => {
-	const { set_lang } = useContext(RegionContext);
+export const ElemRegion: FC<RegionProps> = ({keys, index, children}) => {
+  const { set_lang } = useContext(RegionContext);
 
-	function mouse_click(event: { preventDefault: () => void; }) {
-		event.preventDefault();
-		set_lang(keys[index]);
-	}
+  function mouse_click(event: React.MouseEvent) {
+    event.preventDefault();
+    set_lang(keys[index]);
+  }
 
   return <MenuItem>
     <a
@@ -266,37 +272,48 @@ export const ElemRegion:FC<RegionProps>= ({keys, index, children}) => {
   </MenuItem>
 }
 
-export const SelectRegionsTailwind :FC<SelectRegionProps>= ({values, keys, region}) => {
-	// we cannot use key for the props because it's react reserved word
-	return <>
-		{values.map((elem : any, key : number) => {
-      if(keys[key] !== region) {
-			return <ElemRegion keys={keys} index={key}>
-					{elem}
-				</ElemRegion>
-      } else return <></>
-		})}
-	</>	
+export const SelectRegionsTailwind: FC<SelectRegionProps> = ({values, keys, region}) => {
+  return <>
+    {values.map((elem: any, key: number) => {
+      if (keys[key] !== region) {
+        return <ElemRegion key={key} keys={keys} index={key}>
+          {elem}
+        </ElemRegion>
+      }
+      return null;
+    })}
+  </>
 }
 
 
 export function DropdownRegionsBig() {
   const { lang_db_is, set_lang_db_is } = useContext(HeaderContext);
-	const { lang } = useContext(RegionContext);
+  const { lang } = useContext(RegionContext);
+  const safeLang = (lang ?? 'fr') as ValidLang;
 
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-3">
-        {tree[lang].lang[lang]}
+        <MenuButton 
+          className="inline-flex w-full justify-center gap-x-1.5 px-3 py-3"
+          aria-label="Sélecteur de langue"
+          aria-expanded={lang_db_is ?? false}
+        >
+          {tree[safeLang].lang[safeLang]}
         </MenuButton>
       </div>
       <MenuItems
         transition
         className="absolute text-right right-0 z-10 mt-2 w-20 origin-top-right rounded-md bg-sana_light-200 shadow-lg ring-1 ring-sana_red-100 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        aria-orientation="vertical"
+        aria-labelledby="menu-button"
       >
-        <div className="py-1">
-          <SelectRegionsTailwind values={Object.values(tree[lang].lang)} keys={Object.keys(tree[lang].lang)} region={lang}/>
+        <div className="py-1" role="menu">
+          <SelectRegionsTailwind 
+            values={Object.values(tree[safeLang].lang)} 
+            keys={Object.keys(tree[safeLang].lang)} 
+            region={lang}
+          />
         </div>
       </MenuItems>
     </Menu>

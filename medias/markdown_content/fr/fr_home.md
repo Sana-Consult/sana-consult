@@ -6,6 +6,8 @@ categorie: "home"
 message: "Un besoin"
 misc: "Parlez nous de votre projet"
 lang: "fr"
+description: "Cabinet de conseil spécialisé dans l'optimisation des cabinets d'ophtalmologie. Solutions personnalisées pour améliorer l'efficacité, la gestion et la rentabilité de votre cabinet médical."
+keywords: "cabinet ophtalmologie, conseil médical, optimisation cabinet, gestion cabinet médical, formation médicale"
 ---
 \
 &nbsp;

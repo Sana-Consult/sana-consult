@@ -2,10 +2,12 @@
 menu: "about"
 title: "Qui sommes-nous ?"
 subtitle: "Céline Reibel-Gruber fondatrice"
-categorie : "about"
+categorie: "about"
 message: ""
 misc: ""
 lang: "fr"
+description: "Découvrez Sana Consult et son expertise dans l'optimisation des cabinets d'ophtalmologie. Une approche unique basée sur plus de 15 ans d'expérience dans le secteur médical."
+keywords: "conseil ophtalmologie, expertise médicale, gestion cabinet, transformation digitale, formation équipe médicale"
 ---
 \
 &nbsp;
