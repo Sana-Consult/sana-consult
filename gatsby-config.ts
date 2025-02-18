@@ -5,6 +5,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Sana Consult`,
+    description: `Optimize your ophthalmology practice performance with Sana Consult's unique expertise, offering an exceptional experience for your team and patients.`,
     siteUrl: `https://www.sanaconsult.com`,
     author: `Stanislas Marçais`,
     version: `0.1.0`,
@@ -14,7 +15,7 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-postcss", 
+    "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
     // IMAGE
     `gatsby-plugin-image`,
@@ -87,7 +88,22 @@ const config: GatsbyConfig = {
         path: `${__dirname}/medias/markdown_content/de`,
       },
     },
-  ]
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.sanaconsult.com",
+        sitemap: "https://www.sanaconsult.com/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: ["/internal/", "/draft-posts/"], // Add paths you want to block
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-sitemap`,
+  ],
 };
 
 export default config;

@@ -2,7 +2,7 @@
  * Render Contact
  * 2023-2024
  * v 0.0.2
- * 
+ *
  * */
 
 // REACT
@@ -23,19 +23,26 @@ interface Props {
 
 const paragraphe_styles = {
   marginBottom: "0.5em",
-}
+};
 
 const style_image = {
   maxWidth: "300px",
-  border: "2px solid " +get_css_value("--color_border"),
+  border: "2px solid " + get_css_value("--color_border"),
   borderRadius: "10px",
-}
+};
 
-export const RenderAbout: FC<Props> =() => {
+const getAltTag = (tags: { [key: string]: string }) => {
+  const { lang } = useContext(RegionContext);
+  return tags[lang ?? "fr"] || tags["fr"];
+};
+
+export const RenderAbout: FC<Props> = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "about"}}}) {
+        allMarkdownRemark(
+          filter: { frontmatter: { categorie: { eq: "about" } } }
+        ) {
           edges {
             node {
               frontmatter {
@@ -53,28 +60,48 @@ export const RenderAbout: FC<Props> =() => {
         }
       }
     `
-  )
+  );
   const { lang } = useContext(RegionContext);
-  const {frontmatter, html} = useNode(data, lang);
+  const { frontmatter, html } = useNode(data, lang);
   const info = frontmatter;
 
-  return <>
-  <h4>{info.title}</h4>
-    <h4>{info.subtitle}</h4>
-    <div>
-      <StaticImage 	style={style_image} src="./../../medias/visuel/celine_reibel_portrait.jpg" alt="Bloc opératoir" 
-                        placeholder="blurred" layout="constrained"
-                        />
-    </div>
-    <a href="https://www.studiolecarre.com/" target="_blank">Photo : Studio le carré</a> 
-    <p style={paragraphe_styles}>
-      <MarkdownHtml html={html} />
-    </p>
-    <div>
-      <StaticImage 	style={style_image} src="./../../medias/visuel/bloc_op.jpg" alt="Bloc opératoir" 
-                        placeholder="blurred" layout="constrained"
-                        />
-    </div>
-    <h6>Photo : Étienne Duvernay</h6>
-  </>
-}
+  return (
+    <>
+      <h4>{info.title}</h4>
+      <h4>{info.subtitle}</h4>
+      <div>
+        <StaticImage
+          style={style_image}
+          src="./../../medias/visuel/celine_reibel_portrait.jpg"
+          alt={getAltTag({
+            fr: "Céline Reibel, Fondatrice de Sana Consult",
+            en: "Céline Reibel, Founder of Sana Consult",
+            de: "Céline Reibel, Gründerin von Sana Consult",
+          })}
+          placeholder="blurred"
+          layout="constrained"
+        />
+      </div>
+      <a href="https://www.studiolecarre.com/" target="_blank" rel="noopener noreferrer">
+        Photo : Studio le carré
+      </a>
+      <p style={paragraphe_styles}>
+        <MarkdownHtml html={html} />
+      </p>
+      <div>
+        <StaticImage
+          style={style_image}
+          src="./../../medias/visuel/bloc_op.jpg"
+          alt={getAltTag({
+            fr: "Bloc opératoire moderne équipé de matériel ophtalmologique de pointe",
+            en: "Modern operating room equipped with advanced ophthalmology equipment",
+            de: "Moderner Operationssaal mit fortschrittlicher ophthalmologischer Ausrüstung",
+          })}
+          placeholder="blurred"
+          layout="constrained"
+        />
+      </div>
+      <h6>Photo : Étienne Duvernay</h6>
+    </>
+  );
+};

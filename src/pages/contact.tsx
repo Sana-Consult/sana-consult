@@ -12,7 +12,9 @@ import type { HeadFC, PageProps } from "gatsby"
 import { RenderContact } from "../render/hr.tsx"
 import { Layout } from "../components/hc.tsx";
 import { get_css_value } from "../utils/hu.tsx";
-
+import { SEO } from "../components/seo"
+import { useContext } from "react"
+import { RegionContext } from "../context"
 
 const Contact: FC<PageProps> = () => {
   const style_cell = {
@@ -45,4 +47,20 @@ const Contact: FC<PageProps> = () => {
 
 export default Contact;
 
-export const Head: HeadFC = () => <title>Sana Consult : Contact</title>
+export const Head = () => {
+  const { lang } = useContext(RegionContext);
+  const title = lang === 'fr' ? 'Contact | Sana Consult' : 
+                lang === 'de' ? 'Kontakt | Sana Consult' : 
+                'Contact | Sana Consult';
+  const description = lang === 'fr' ? 'Contactez Sana Consult pour optimiser votre cabinet d\'ophtalmologie' :
+                     lang === 'de' ? 'Kontaktieren Sie Sana Consult für die Optimierung Ihrer Augenarztpraxis' :
+                     'Contact Sana Consult to optimize your ophthalmology practice';
+  
+  return (
+    <SEO 
+      title={title}
+      description={description}
+      pathname="/contact"
+    />
+  )
+}

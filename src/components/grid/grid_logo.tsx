@@ -5,14 +5,15 @@
  * 
  */
 // REACT
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { useState } from "react";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 // APP
 import { get_css_value } from "../../utils/hu.tsx";
-
+import { RegionContext } from "../../context";
+import { validateAltTag } from "../../utils/image-utils";
 
 const style_image = {
   border: "2px solid " +get_css_value("--color_border"),
@@ -50,15 +51,31 @@ interface PropsVignette {
 }
 
 const Vignette: FC<PropsVignette> = (elem, index) => {
-  // je ne comprends pas pourquoi je dois écrire elem.elem pur rentrer dans l'élément
-  return elem !== null?
+  if (!elem) return null;
+  
+  const imageName = elem.elem.node.name;
+  const { lang } = useContext(RegionContext);
+  
+  const getPartnerAltText = (name: string, language: string): string => {
+    const translations = {
+      fr: `${name} - Partenaire de Sana Consult`,
+      en: `${name} - Sana Consult Partner`,
+      de: `${name} - Sana Consult Partner`
+    };
+    return translations[language as keyof typeof translations] || translations.fr;
+  };
+
+  return (
     <div>
       <div style={style_image}>
-        <GatsbyImage image={elem.elem.node.childImageSharp.gatsbyImageData} alt={String(index)}/>
+        <GatsbyImage 
+          image={elem.elem.node.childImageSharp.gatsbyImageData} 
+          alt={validateAltTag(getPartnerAltText(imageName, lang || 'fr'))}
+        />
       </div>
       <p>{elem.elem.node.name}</p>
-    </div> : 
-    <></>;
+    </div>
+  );
 }
 
 
