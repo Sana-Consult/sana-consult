@@ -16,6 +16,7 @@ import { get_css_value, useNode } from "../utils/hu.tsx";
 import { ButtonCodeNav } from "../components/hc.tsx";
 import { RegionContext } from "./../context.tsx";
 import { MarkdownHtml } from "../components/hc.tsx";
+import { getAltTag } from "../utils/image-utils";
 
 // need to define properly the any... it's very too much and very lazy !
 interface Props {
@@ -83,9 +84,16 @@ export const RenderHome: FC<Props> =() => {
   return <>
       <div>
         <div style={style_titles}>
-          <StaticImage 	src="./../../medias/logo_sana_long.png" alt="Sana Consult" 
-                        placeholder="blurred" layout="constrained"
-                        />
+          <StaticImage 
+            src="./../../medias/logo_sana_long.png" 
+            alt={getAltTag({
+              fr: "Sana Consult - Optimisation des cabinets d'ophtalmologie",
+              en: "Sana Consult - Ophthalmology Practice Optimization",
+              de: "Sana Consult - Optimierung der Augenarztpraxis"
+            })}
+            placeholder="blurred" 
+            layout="constrained"
+          />
         </div>
         <h5 style={style_subtitles}>{info.subtitle}</h5>
         <h3 style={question_styles}>{info.message}</h3>

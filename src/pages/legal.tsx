@@ -11,6 +11,9 @@ import type { HeadFC } from "gatsby"
 // APP
 import { Layout } from "../components/hc";
 import { RenderLegal } from "../render/hr";
+import { SEO } from "../components/seo"
+import { useContext } from "react"
+import { RegionContext } from "../context"
 
 /*
 it's necessary to export the Components Page as default
@@ -28,4 +31,20 @@ export const Legal: FC<Props> = ({data}) => {
 
 export default Legal;
 
-export const Head: HeadFC = () => <title>Sana Consult : Legal</title>
+export const Head = () => {
+  const { lang } = useContext(RegionContext);
+  const title = lang === 'fr' ? 'Mentions légales | Sana Consult' : 
+                lang === 'de' ? 'Rechtliche Hinweise | Sana Consult' : 
+                'Legal Notice | Sana Consult';
+  const description = lang === 'fr' ? 'Mentions légales et conditions d\'utilisation de Sana Consult' :
+                     lang === 'de' ? 'Rechtliche Hinweise und Nutzungsbedingungen von Sana Consult' :
+                     'Legal notice and terms of use for Sana Consult';
+  
+  return (
+    <SEO 
+      title={title}
+      description={description}
+      pathname="/legal"
+    />
+  )
+}
