@@ -77,5 +77,3 @@ export const RenderLegal: FC<Props> =() => {
       </div>
   </>
 }
-
-// https://www.owlsite.org/

@@ -22,4 +22,4 @@ const About: FC<PageProps> = () => {
 
 export default About;
 
-export const Head: HeadFC = () => <title>Sana Consult</title>
+export const Head: HeadFC = () => <title>Sana Consult : About</title>
