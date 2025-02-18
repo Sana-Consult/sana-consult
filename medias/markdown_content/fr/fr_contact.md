@@ -15,6 +15,7 @@ mobile: "Portable *"
 country: "Pays"
 town: "Ville"
 mailing: "J'accepte de recevoir des informations de la part de la société SanaConsult"
+alert: "Informations envoyées"
 ---
 \
 &nbsp;

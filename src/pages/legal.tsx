@@ -1,13 +1,13 @@
 /**
  * Legal
- * 2023-2024
+ * 2023-2025
  * v 0.1.0
  * 
  * */
 // REACT
 import React, { FC } from "react";
 // GATSBY
-import { graphql } from "gatsby";
+import type { HeadFC } from "gatsby"
 // APP
 import { Layout } from "../components/hc";
 import { RenderLegal } from "../render/hr";
@@ -28,4 +28,4 @@ export const Legal: FC<Props> = ({data}) => {
 
 export default Legal;
 
-
+export const Head: HeadFC = () => <title>Sana Consult : Legal</title>

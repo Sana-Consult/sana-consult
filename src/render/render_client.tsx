@@ -11,7 +11,7 @@ import { useContext } from "react";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
 // APP
-import { useNode, get_css_value } from "../utils/hu.tsx";
+import { useNode } from "../utils/hu.tsx";
 import { MarkdownHtml, GridLogo } from "../components/hc.tsx";
 import { RegionContext } from "../context.tsx";
 
@@ -23,12 +23,6 @@ interface Props {
 const paragraphe_styles = {
   marginBottom: "0.5em",
 }
-
-// const style_image = {
-//   maxWidth: "300px",
-//   border: "2px solid " +get_css_value("--color_border"),
-//   borderRadius: "10px",
-// }
 
 export const RenderClient: FC<Props> =() => {
   const data = useStaticQuery(
@@ -56,7 +50,6 @@ export const RenderClient: FC<Props> =() => {
   const { lang } = useContext(RegionContext);
   const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter;
-  // console.log("info", info);
 
   return <>
     <h4>{info.title}</h4>

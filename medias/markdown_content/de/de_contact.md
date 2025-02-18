@@ -15,6 +15,7 @@ mobile: "Mobiltelefon *"
 country: "Land"
 town: "Stadt"
 mailing: "Ich bin damit einverstanden, Informationen von der Firma SanaConsult zu erhalten."
+alert: "Information gesendet"
 ---
 \
 &nbsp;

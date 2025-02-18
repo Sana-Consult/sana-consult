@@ -19,13 +19,8 @@ const style_image = {
   borderRadius: "10px",
 }
 
-// const style_vignette = {
-//   maxWidth: "300px",
-// }
-
 
 function build_list(edges : any, list : any) {
-  // let elem_index = 1;
   // init the first elem as null to avoid the bug of FullImage compoent when the index is equal to '0'
 	list.push(null);
 
@@ -58,7 +53,6 @@ const Vignette: FC<PropsVignette> = (elem, index) => {
   // je ne comprends pas pourquoi je dois écrire elem.elem pur rentrer dans l'élément
   return elem !== null?
     <div>
-    {/* <div style={style_vignette}> */}
       <div style={style_image}>
         <GatsbyImage image={elem.elem.node.childImageSharp.gatsbyImageData} alt={String(index)}/>
       </div>

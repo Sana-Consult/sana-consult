@@ -1,7 +1,7 @@
 /**
  * Render Contact via Koban
  * 2025-2025
- * v 0.0.1
+ * v 0.0.2
  * */
 
 // REACT
@@ -48,6 +48,7 @@ export const RenderContact: FC<Props> = ({
                 mobile
                 country
                 town
+                alert
               }
               html
             }
@@ -107,7 +108,6 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
         RegForm("673c8049e856d6e37967884b");
       }
     };
-
     const observer = new MutationObserver((mutationsList) => {
       for (let mutation of mutationsList) {
         if (mutation.type === "childList") {
@@ -115,7 +115,7 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
           if (target) {
             //@ts-ignore
             f_hidepop();
-            alert("ALERTE ROUGE");
+            alert(info.alert);
             break;
           }
         }
@@ -126,8 +126,6 @@ const Koban: FC<PropsKoban> = ({ info, style_box, style_cell }) => {
       childList: true,
       subtree: true,
     });
-
-    console.log("Observer installé")
 
     return () => {
       document.body.removeChild(script);
