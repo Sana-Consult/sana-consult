@@ -1,23 +1,21 @@
 /**
  * GRID LOGO
  * 2025-2025
- * v 0.1.0
+ * v 0.2.0
  * 
  */
 // REACT
-import React, { FC } from "react";
+import React, { FC} from "react";
 import { useState } from "react";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 // APP
-import { get_css_value } from "../../utils/hu.tsx";
+import { Vignette } from "./vignette";
 
 
-const style_image = {
-  border: "2px solid " +get_css_value("--color_border"),
-  borderRadius: "10px",
-}
+
+
+
 
 
 function build_list(edges : any, list : any) {
@@ -44,22 +42,9 @@ function build_list(edges : any, list : any) {
   return list;
 }
 
-interface PropsVignette {
-  elem : any;
-  index : number;
-}
 
-const Vignette: FC<PropsVignette> = (elem, index) => {
-  // je ne comprends pas pourquoi je dois écrire elem.elem pur rentrer dans l'élément
-  return elem !== null?
-    <div>
-      <div style={style_image}>
-        <GatsbyImage image={elem.elem.node.childImageSharp.gatsbyImageData} alt={String(index)}/>
-      </div>
-      <p>{elem.elem.node.name}</p>
-    </div> : 
-    <></>;
-}
+
+
 
 
 interface PropsGrid {}
@@ -85,7 +70,6 @@ export const GridLogo: FC<PropsGrid> = () => {
       }
     `
   );
-
 
   const [list, set_list] = useState([]);;
   if(list.length === 0) {

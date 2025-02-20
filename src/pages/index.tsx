@@ -1,11 +1,8 @@
 /**
- * Index
- * 2024-2024
- * v 0.0.1
- * 
+ * Index / Home
+ * 2024-2025
+ * v 0.2.0
  * */
-
-
 
 // WARNING
 // Flash of Unstyled Content (FOUC)
@@ -17,12 +14,15 @@
 
 // REACT
 import React, { FC } from "react";
-// import asyncRoute from './asyncRoute'
 // GATSBY
-import type { HeadFC, PageProps } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 // APP
-import { RenderHome, RenderAbout } from "./../render/hr.tsx"
-import { Layout } from "./../components/hc.tsx";
+import { RenderHome } from "./../render/hr.tsx"
+import { Layout, SEO } from "../components/hc.tsx";
+import { useContext } from "react"
+import { RegionContext } from "../context"
+import { useNode } from "../utils/hu.tsx";
 
 // Try to add meta to disable auto translate from safari and google
 // https://medium.com/yellowcode/how-to-do-meta-tags-in-gatsbyjs-45245dc68ab9
@@ -39,4 +39,40 @@ const IndexPage: FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Sana Consult</title>
+// export const Head: HeadFC = () => <title>Sana Consult</title>
+
+
+export const Head = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(filter: {frontmatter: {categorie: {eq: "home"}}}) {
+          edges {
+            node {
+              frontmatter {
+                categorie
+                seo
+                title
+                lang
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  const { lang } = useContext(RegionContext);
+  console.log("about.tsx region", lang);
+  const {frontmatter } = useNode(data, lang);
+  const info = frontmatter;
+  const title = "Sana Consult : " + String(info.title);
+  // const path = "/" + String(info.categorie);
+  const path = "/"; // because it's the index
+  const seo = String(info.seo);
+    // console.log("HEAD", lang, path, title, seo);
+    return (<SEO
+      title={title}
+      description={seo}
+      pathname={path}/>)
+  }
+  

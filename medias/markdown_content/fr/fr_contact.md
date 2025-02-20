@@ -5,6 +5,7 @@ subtitle: ""
 categorie : "contact"
 message: "Parlez nous de votre projet *"
 newsletter: "J'accepte de recevoir des informations de la part de la société Sana Consult."
+mailing: "J'accepte de recevoir des informations de la part de la société Sana Consult"
 misc: "* Champ obligatoire"
 lang: "fr"
 send: "envoyer"
@@ -14,8 +15,9 @@ mail: "Courriel *"
 mobile: "Portable *"
 country: "Pays"
 town: "Ville"
-mailing: "J'accepte de recevoir des informations de la part de la société SanaConsult"
 alert: "Informations envoyées"
+description: ""
+seo: "Contactez Sana Consult pour optimiser votre cabinet d\'ophtalmologie"
 ---
 \
 &nbsp;

@@ -6,6 +6,8 @@ categorie : "about"
 message: ""
 misc: ""
 lang: "en"
+description: ""
+seo: "Learn about Sana Consult and our expertise in optimizing ophthalmology practices"
 ---
 \
 &nbsp;

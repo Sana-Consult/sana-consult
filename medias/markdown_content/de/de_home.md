@@ -6,6 +6,8 @@ categorie: "home"
 message: "Ein Bedürfnis"
 misc: "Senden Sie Ihr Projekt an uns"
 lang: "de"
+description: ""
+seo: "Startseite | Sana Consult"
 ---
 \
 &nbsp;

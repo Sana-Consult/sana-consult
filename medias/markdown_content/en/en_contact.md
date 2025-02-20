@@ -5,6 +5,7 @@ subtitle: ""
 categorie : "contact"
 message: "Little message to explain what you want *"
 newsletter: "I agree to receive information from Sana Consult."
+mailing: "I agree to receive information from Sana Consult."
 misc: "* Mandatory field"
 lang: "en"
 send: "send"
@@ -14,8 +15,9 @@ mail: "Email *"
 mobile: "Mobile *"
 country: "Country"
 town: "Town"
-mailing: "I agree to receive information from SanaConsult"
 alert: "Informations sent"
+description: ""
+seo: "Contact Sana Consult to optimize your ophthalmology practice"
 ---
 \
 &nbsp;

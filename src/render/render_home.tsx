@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 // APP
-import { get_css_value, useNode } from "../utils/hu.tsx";
+import { get_css_value, useNode, get_alt_tag } from "../utils/hu.tsx";
 import { ButtonCodeNav } from "../components/hc.tsx";
 import { RegionContext } from "./../context.tsx";
 import { MarkdownHtml } from "../components/hc.tsx";
@@ -80,10 +80,16 @@ export const RenderHome: FC<Props> =() => {
   const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter;
 
+  const alt_logo = {
+    fr: "Sana Consult - Optimisation des cabinets d'ophtalmologie", 
+    en : "Sana Consult - Ophthalmology Practice Optimization", 
+    de : "Sana Consult - Optimierung der Augenarztpraxis"
+  }
+
   return <>
       <div>
         <div style={style_titles}>
-          <StaticImage 	src="./../../medias/logo_sana_long.png" alt="Sana Consult" 
+          <StaticImage 	src="./../../medias/logo_sana_long.png" alt={get_alt_tag(alt_logo)} 
                         placeholder="blurred" layout="constrained"
                         />
         </div>
@@ -91,7 +97,7 @@ export const RenderHome: FC<Props> =() => {
         <h3 style={question_styles}>{info.message}</h3>
         <ButtonCodeNav style={style} what={info.misc} to="/contact"/>
         <p style={paragraph_styles}>
-          <MarkdownHtml html={html} />
+          <MarkdownHtml html={html}/>
         </p>
       </div>
   </>

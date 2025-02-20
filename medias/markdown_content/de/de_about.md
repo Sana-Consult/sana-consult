@@ -6,6 +6,8 @@ categorie : "about"
 message: ""
 misc: ""
 lang: "de"
+description: ""
+seo: "Erfahren Sie mehr über Sana Consult und unsere Expertise in der Optimierung von Augenarztpraxen"
 ---
 \
 &nbsp;
@@ -22,4 +24,4 @@ Seit 2024 begleitet **SanaConsult** Fachärzte für Augenheilkunde bei der Weite
 - •	**Individueller Ansatz:** Jede Praxis ist einzigartig. Unsere Lösungen sind es auch. Sie sind darauf ausgelegt, Ihre Teams zu stärken, Patienten zu binden und Ihre Ergebnisse zu verbessern.
 \
 &nbsp;
-Mit **SanaConsult**verwandeln Sie Herausforderungen in Chancen und schreiben ein neues Erfolgskapitel für Ihre Praxis.
+Mit **SanaConsult** verwandeln Sie Herausforderungen in Chancen und schreiben ein neues Erfolgskapitel für Ihre Praxis.

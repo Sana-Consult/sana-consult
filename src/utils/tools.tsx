@@ -5,7 +5,8 @@
  * */
 
 
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect, useContext } from "react";
+import { RegionContext } from "../context";
 
 
 export function get_css_value(name: string) {
@@ -80,3 +81,10 @@ export function height_higher_than(value : number) {
     return true;
   } else return false;
 }
+
+
+
+export const get_alt_tag = (tags: { [key: string]: string }) => {
+  const { lang } = useContext(RegionContext);
+  return tags[lang ?? "fr"] || tags["fr"];
+};

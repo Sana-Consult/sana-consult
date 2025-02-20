@@ -6,8 +6,7 @@
  * */
 
 // REACT
-import React, { FC } from "react";
-import { useContext } from "react";
+import React, { FC, useContext } from "react";
 // GATSBY
 import { useStaticQuery, graphql } from "gatsby";
 // APP

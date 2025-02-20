@@ -5,6 +5,7 @@ subtitle: ""
 categorie : "contact"
 message: "Kleine nachricht, um zu erklären, was sie wollen *"
 newsletter: "Ich bin damit einverstanden, Informationen von Sana Consult zu erhalten."
+mailing: "Ich bin damit einverstanden, Informationen von der Firma Sana Consult zu erhalten."
 misc: "* Pflichtfeld"
 lang: "de"
 send: "senden"
@@ -14,8 +15,9 @@ mail: "E-mail *"
 mobile: "Mobiltelefon *"
 country: "Land"
 town: "Stadt"
-mailing: "Ich bin damit einverstanden, Informationen von der Firma SanaConsult zu erhalten."
 alert: "Information gesendet"
+description: ""
+seo: "Kontaktieren Sie Sana Consult für die Optimierung Ihrer Augenarztpraxis"
 ---
 \
 &nbsp;

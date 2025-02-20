@@ -1,14 +1,12 @@
 /**
- * 
  * Context
- * version 0.0.1
- * 2023-2023
- * 
+ * version 0.0.2
+ * 2023-2025
  * */
 
 //REACT
 import React, { FC } from "react";
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext } from "react";
 
 interface PropsContext {
   children? : React.ReactNode;

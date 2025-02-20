@@ -4,6 +4,8 @@ title: "Legals"
 subtitle: "Member of the association"
 categorie : "legal"
 lang: "en"
+description: ""
+seo: "Legal notice and terms of use for Sana Consult"
 ---
 Sana Consult is registered in France under the number 84380914338. 
 

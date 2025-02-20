@@ -6,6 +6,9 @@ categorie : "client"
 message: ""
 misc: ""
 lang: "en"
+alt: "Sana Consult Partner"
+description: ""
+seo: "Discover our clients and their success stories with Sana Consult"
 ---
 \
 &nbsp;
