@@ -37,20 +37,20 @@ const meta_description = (lang: string | null, info : any): string => {
 export const SEO = ({ title, description, pathname, children }: SEOProps) => {
   const {
     title: default_title,
-    description_fr: default_description_fr,
-    description_en: default_description_en,
-    description_de: default_description_de,
     siteUrl,
     author,
+    version,
   } = useSiteMetadata();
 
   const { lang } = useContext(RegionContext);
-  const default_description = meta_description(lang, useSiteMetadata())
+  const default_description = meta_description(lang, useSiteMetadata());
+
   const seo = {
     title: title || default_title,
     description: description || default_description,
     url: `${siteUrl}${pathname || ``}`,
-    author,
+    author: author,
+    version : version,
   };
 
   return (

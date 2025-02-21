@@ -56,7 +56,7 @@ export const RenderAbout: FC<Props> =() => {
     `
   )
   const { lang } = useContext(RegionContext);
-  console.log("render_about.tsx region", lang);
+  console.log("NORMAL: render_about.tsx region", lang);
   const {frontmatter, html} = useNode(data, lang);
   const info = frontmatter;
 

@@ -46,7 +46,7 @@ export const Head = () => {
     `
   )
   const { lang } = useContext(RegionContext);
-  console.log("about.tsx region", lang);
+  console.log("HEAD : about.tsx region", lang);
   const {frontmatter } = useNode(data, lang);
   const info = frontmatter;
   const title = "SanaConsult : " + String(info.title);

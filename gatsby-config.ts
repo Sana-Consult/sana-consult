@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `SanaConsult`,
     siteUrl: `https://www.sanaconsult.com`,
-    author: `Stanislas Marçais`,
+    author: `Olombelona | Stanislas Marçais`,
     version: `0.1.0`,
     description_fr:`SanaConsult aide les cabinets d'ophtalmologie à optimiser leur gestion et leur rentabilité, particulièrement pour la chirurgie réfractive. Avec une approche sur mesure, nous améliorons l'expérience patient, structurons l'organisation interne et maximisons la performance financière avec des KPI adaptés. Nos solutions permettent aux professionnels de la vision de se recentrer sur les soins tout en réduisant la charge administrative. Inspirée des standards du service client et de l’aérien, notre expertise garantit un accompagnement stratégique efficace pour une gestion fluide et pérenne.`,
     description_en:`SanaConsult helps ophthalmology practices optimise their management and profitability, particularly for refractive surgery. With a tailored approach, we improve the patient experience, structure the internal organisation and maximise financial performance with appropriate KPIs. Our solutions enable vision professionals to refocus on care while reducing the administrative burden. Inspired by customer service and airline standards, our expertise guarantees effective strategic support for smooth, long-term management.`,
