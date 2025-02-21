@@ -7,7 +7,7 @@ message: ""
 misc: ""
 lang: "fr"
 description: ""
-seo: "Découvrez Sana Consult et notre expertise en optimisation des cabinets d'ophtalmologie"
+seo: "Découvrez SanaConsult et notre expertise en optimisation des cabinets d'ophtalmologie"
 ---
 \
 &nbsp;

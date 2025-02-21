@@ -5,11 +5,11 @@ subtitle: "Membre de l'association"
 categorie : "legal"
 lang: "fr"
 description: ""
-seo: "Mentions légales et conditions d\'utilisation de Sana Consult"
+seo: "Mentions légales et conditions d\'utilisation de SanaConsult"
 ---
-Sana Consult enregistré sous le numéro 84380914338. Cet enregistrement ne vaut pas agrément de l’État
+SanaConsult enregistré sous le numéro 84380914338. Cet enregistrement ne vaut pas agrément de l’État
 
-Société : Sana Consult - adressse à compléter
+Société : SanaConsult - adressse à compléter
 
 Fournisseur d'accès : Netlify & Github
 

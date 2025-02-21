@@ -1,13 +1,13 @@
 ---
 menu: "home"
-title: "Sana Consult"
-subtitle: "With Sana Consult, optimise the performance of your practice by drawing on our unique expertise and offering a unique experience to your team and your patients."
+title: "SanaConsult"
+subtitle: "With SanaConsult, optimise the performance of your practice by drawing on our unique expertise and offering a unique experience to your team and your patients."
 categorie: "home"
 message: "A need"
 misc: "Send your project to us"
 lang: "en"
 description: ""
-seo: "Home | Sana Consult"
+seo: "Home | SanaConsult"
 ---
 \
 &nbsp;

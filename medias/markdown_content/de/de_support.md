@@ -7,7 +7,7 @@ message: ""
 misc: ""
 lang: "de"
 description: ""
-seo: "Support und Hilfe für Sana Consult Kunden"
+seo: "Support und Hilfe für SanaConsult Kunden"
 ---
 \
 &nbsp;

@@ -49,7 +49,7 @@ export const Head = () => {
   console.log("about.tsx region", lang);
   const {frontmatter } = useNode(data, lang);
   const info = frontmatter;
-  const title = "Sana Consult : " + String(info.title);
+  const title = "SanaConsult : " + String(info.title);
   const path = "/" + String(info.categorie);
   const seo = String(info.seo);
   // console.log("HEAD", lang, path, title, seo);

@@ -26,7 +26,7 @@ const Client: FC<PageProps> = () => {
 
 export default Client;
 
-// export const Head: HeadFC = () => <title>Sana Consult : Clients</title>
+// export const Head: HeadFC = () => <title>SanaConsult : Clients</title>
 
 export const Head = () => {
   const data = useStaticQuery(
@@ -51,7 +51,7 @@ export const Head = () => {
   console.log("about.tsx region", lang);
   const {frontmatter } = useNode(data, lang);
   const info = frontmatter;
-  const title = "Sana Consult : " + String(info.title);
+  const title = "SanaConsult : " + String(info.title);
   const path = "/" + String(info.categorie);
   const seo = String(info.seo);
     // console.log("HEAD", lang, path, title, seo);

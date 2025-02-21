@@ -62,9 +62,9 @@ export const RenderAbout: FC<Props> =() => {
 
 
   const alt_celine = {
-    fr: "Céline Reibel, Fondatrice de Sana Consult", 
-    en : "Céline Reibel, Founder of Sana Consult", 
-    de :"Céline Reibel, Gründerin von Sana Consult"
+    fr: "Céline Reibel, Fondatrice de SanaConsult", 
+    en : "Céline Reibel, Founder of SanaConsult", 
+    de :"Céline Reibel, Gründerin von SanaConsult"
   }
 
   const alt_bloc = {

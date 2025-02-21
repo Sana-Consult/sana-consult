@@ -5,11 +5,11 @@ subtitle: "Mitglied der Vereinigung"
 categorie : "legal"
 lang: "de"
 description: ""
-seo: "Rechtliche Hinweise und Nutzungsbedingungen von Sana Consult"
+seo: "Rechtliche Hinweise und Nutzungsbedingungen von SanaConsult"
 ---
-Sana Consult registriert unter der Nummer 84380914338. Diese Registrierung gilt nicht als staatliche Zulassung.
+SanaConsult registriert unter der Nummer 84380914338. Diese Registrierung gilt nicht als staatliche Zulassung.
 
-Firma: Sana Consult - Adresse zum Ausfüllen.
+Firma: SanaConsult - Adresse zum Ausfüllen.
 
 Provider: Netlify & Github
 

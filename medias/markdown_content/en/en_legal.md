@@ -5,12 +5,12 @@ subtitle: "Member of the association"
 categorie : "legal"
 lang: "en"
 description: ""
-seo: "Legal notice and terms of use for Sana Consult"
+seo: "Legal notice and terms of use for SanaConsult"
 ---
-Sana Consult is registered in France under the number 84380914338. 
+SanaConsult is registered in France under the number 84380914338. 
 
 This registration does not constitute French government approval.
 
-Company : Sana Consult - address to be completed
+Company : SanaConsult - address to be completed
 
 Service provider : Netlify & Github

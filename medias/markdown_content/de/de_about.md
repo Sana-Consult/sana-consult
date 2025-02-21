@@ -7,7 +7,7 @@ message: ""
 misc: ""
 lang: "de"
 description: ""
-seo: "Erfahren Sie mehr über Sana Consult und unsere Expertise in der Optimierung von Augenarztpraxen"
+seo: "Erfahren Sie mehr über SanaConsult und unsere Expertise in der Optimierung von Augenarztpraxen"
 ---
 \
 &nbsp;

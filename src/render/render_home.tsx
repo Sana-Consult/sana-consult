@@ -81,9 +81,9 @@ export const RenderHome: FC<Props> =() => {
   const info = frontmatter;
 
   const alt_logo = {
-    fr: "Sana Consult - Optimisation des cabinets d'ophtalmologie", 
-    en : "Sana Consult - Ophthalmology Practice Optimization", 
-    de : "Sana Consult - Optimierung der Augenarztpraxis"
+    fr: "SanaConsult - Optimisation des cabinets d'ophtalmologie", 
+    en : "SanaConsult - Ophthalmology Practice Optimization", 
+    de : "SanaConsult - Optimierung der Augenarztpraxis"
   }
 
   return <>
