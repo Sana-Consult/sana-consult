@@ -17,7 +17,7 @@ country: "Pays"
 town: "Ville"
 alert: "Informations envoyées"
 description: ""
-seo: "Contactez SanaConsult pour optimiser votre cabinet d\'ophtalmologie"
+seo: "Contactez SanaConsult pour optimiser votre cabinet d'ophtalmologie"
 ---
 \
 &nbsp;

@@ -1,12 +1,14 @@
 /**
  * SEO
  * 2025-2025
- * v 0.0.1
+ * v 0.0.2
  * */
 
-
-import React from "react";
+// REACT
+import React, { useContext } from "react";
+// APP
 import { useSiteMetadata } from "../utils/hu";
+import { RegionContext } from "../context";
 
 interface SEOProps {
   title?: string;
@@ -15,17 +17,38 @@ interface SEOProps {
   children?: React.ReactNode;
 }
 
+const checkString = (value: any): boolean => {
+  return value instanceof String || typeof value === "string";
+};
+
+const meta_description = (lang: string | null, info : any): string => {
+  if(lang === "fr" && checkString(info.description_fr)) {
+    return info.description_fr;
+  }
+  if(lang === "en" && checkString(info.description_en)) {
+    return info.description_en;
+  }
+  if(lang === "de" && checkString(info.description_de)) {
+    return info.description_de;
+  }
+  else return "no description";
+};
+
 export const SEO = ({ title, description, pathname, children }: SEOProps) => {
   const {
-    title: defaultTitle,
-    description: defaultDescription,
+    title: default_title,
+    description_fr: default_description_fr,
+    description_en: default_description_en,
+    description_de: default_description_de,
     siteUrl,
     author,
   } = useSiteMetadata();
 
+  const { lang } = useContext(RegionContext);
+  const default_description = meta_description(lang, useSiteMetadata())
   const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
+    title: title || default_title,
+    description: description || default_description,
     url: `${siteUrl}${pathname || ``}`,
     author,
   };
