@@ -47,6 +47,12 @@ export const Head = () => {
   )
   const { lang } = useContext(RegionContext);
   console.log("HEAD : about.tsx region", lang);
+  console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
+
+  // https://clouddevs.com/typescript/internationalization/#51-Detecting-Users-Language
+  // https://react.i18next.com/
+  // https://www.locize.com/blog/gatsby-i18n
+  // https://www.gatsbyjs.com/plugins/gatsby-plugin-react-i18next/
   const {frontmatter } = useNode(data, lang);
   const info = frontmatter;
   const title = "SanaConsult : " + String(info.title);
