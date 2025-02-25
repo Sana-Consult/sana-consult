@@ -1,19 +1,19 @@
 /**
  * Contact
  * 2023-2025
- * v 0.2.0
+ * v 0.2.1
  * */
 // REACT
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 // GATSBY
-import type { HeadFC, PageProps } from "gatsby";
+import type { PageProps } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 // APP
 import { RenderContact } from "../render/hr.tsx"
 import { Layout, SEO } from "../components/hc.tsx";
 import { get_css_value } from "../utils/hu.tsx";
-import { useContext } from "react"
-import { RegionContext } from "../context"
+// import { useContext } from "react"
+// import { RegionContext } from "../context"
 import { useNode } from "../utils/hu.tsx";
 
 
@@ -70,9 +70,19 @@ export const Head = () => {
       }
     `
   )
-  const { lang } = useContext(RegionContext);
-  console.log("about.tsx region", lang);
-  const {frontmatter } = useNode(data, lang);
+  // Ici au lieu d'utliser le Context qui bug, nous utilisons la détection de language du navigateur, 
+  // ce qui permet d'afficher les onglets dans la bonne langue, 
+  // mais désactive le choix de l'utilisateur via le bouton langue malheureusement.
+  const [language, setLanguage] = useState('');
+  useEffect(() => {
+    // Détecter la langue du navigateur
+    const detectedLanguage = navigator.language || navigator.languages[0];
+    setLanguage(detectedLanguage);
+  }, []);
+
+  // const { lang } = useContext(RegionContext);
+  // ici nous passons "language" à la place "lang" venant du RegionContext
+  const {frontmatter } = useNode(data, language);
   const info = frontmatter;
   const title = "SanaConsult : " + String(info.title);
   const path = "/" + String(info.categorie);
