@@ -11,15 +11,8 @@ import { useStaticQuery, graphql } from "gatsby";
 // APP
 import { RenderLegal } from "../render/hr";
 import { Layout, SEO } from "../components/hc.tsx";
-// import { useContext } from "react"
-// import { RegionContext } from "../context"
 import { useNode } from "../utils/hu.tsx";
 
-
-/*
-it's necessary to export the Components Page as default
-If it's not do, Gatby Router don't find the page and return an error
-*/
 interface Props {
   data: any;
 }
@@ -31,10 +24,6 @@ export const Legal: FC<Props> = ({data}) => {
 };
 
 export default Legal;
-
-// export const Head: HeadFC = () => <title>SanaConsult : Legal</title>
-
-
 
 export const Head = () => {
   const data = useStaticQuery(
@@ -55,27 +44,18 @@ export const Head = () => {
       }
     `
   )
-  // const { lang } = useContext(RegionContext);
-  // console.log("about.tsx region", lang);
-  // const {frontmatter } = useNode(data, lang);
-    // Ici au lieu d'utliser le Context qui bug, nous utilisons la détection de language du navigateur, 
-    // ce qui permet d'afficher les onglets dans la bonne langue, 
-    // mais désactive le choix de l'utilisateur via le bouton langue malheureusement.
-    const [language, setLanguage] = useState('');
-    useEffect(() => {
-      // Détecter la langue du navigateur
-      const detectedLanguage = navigator.language || navigator.languages[0];
-      setLanguage(detectedLanguage);
-    }, []);
+  const [language, setLanguage] = useState('');
+  useEffect(() => {
+    // Détecter la langue du navigateur
+    const detectedLanguage = navigator.language || navigator.languages[0];
+    setLanguage(detectedLanguage);
+  }, []);
   
-    // const { lang } = useContext(RegionContext);
-    // ici nous passons "language" à la place "lang" venant du RegionContext
-    const {frontmatter } = useNode(data, language);
+  const {frontmatter } = useNode(data, language);
   const info = frontmatter;
   const title = "SanaConsult : " + String(info.title);
   const path = "/" + String(info.categorie);
   const seo = String(info.seo);
-    // console.log("HEAD", lang, path, title, seo);
     return (<SEO
       title={title}
       description={seo}

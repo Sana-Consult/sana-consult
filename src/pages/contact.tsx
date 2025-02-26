@@ -11,11 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
 // APP
 import { RenderContact } from "../render/hr.tsx"
 import { Layout, SEO } from "../components/hc.tsx";
-import { get_css_value } from "../utils/hu.tsx";
-// import { useContext } from "react"
-// import { RegionContext } from "../context"
-import { useNode } from "../utils/hu.tsx";
-
+import { get_css_value, useNode } from "../utils/hu.tsx";
 
 const Contact: FC<PageProps> = () => {
   const style_cell = {
@@ -48,9 +44,6 @@ const Contact: FC<PageProps> = () => {
 
 export default Contact;
 
-// export const Head: HeadFC = () => <title>SanaConsult : Contact</title>
-
-
 export const Head = () => {
   const data = useStaticQuery(
     graphql`
@@ -70,27 +63,21 @@ export const Head = () => {
       }
     `
   )
-  // Ici au lieu d'utliser le Context qui bug, nous utilisons la détection de language du navigateur, 
-  // ce qui permet d'afficher les onglets dans la bonne langue, 
-  // mais désactive le choix de l'utilisateur via le bouton langue malheureusement.
+
   const [language, setLanguage] = useState('');
   useEffect(() => {
-    // Détecter la langue du navigateur
     const detectedLanguage = navigator.language || navigator.languages[0];
     setLanguage(detectedLanguage);
   }, []);
 
-  // const { lang } = useContext(RegionContext);
-  // ici nous passons "language" à la place "lang" venant du RegionContext
   const {frontmatter } = useNode(data, language);
   const info = frontmatter;
   const title = "SanaConsult : " + String(info.title);
   const path = "/" + String(info.categorie);
   const seo = String(info.seo);
-    // console.log("HEAD", lang, path, title, seo);
-    return (<SEO
-      title={title}
-      description={seo}
-      pathname={path}/>)
-  }
+  return (<SEO
+    title={title}
+    description={seo}
+    pathname={path}/>)
+}
   

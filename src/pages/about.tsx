@@ -11,10 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
 // APP
 import { RenderAbout } from "../render/hr.tsx"
 import { Layout, SEO } from "../components/hc.tsx";
-// import { useContext } from "react"
-// import { RegionContext } from "../context"
 import { useNode } from "../utils/hu.tsx";
-
 
 const About: FC<PageProps> = () => {
   return (
@@ -25,10 +22,6 @@ const About: FC<PageProps> = () => {
 }
 
 export default About;
-
-
-
-
 
 export const Head = () => {
   const data = useStaticQuery(

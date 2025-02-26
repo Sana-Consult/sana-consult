@@ -4,14 +4,6 @@
  * v 0.2.1
  * */
 
-// WARNING
-// Flash of Unstyled Content (FOUC)
-
-// https://www.digitalocean.com/community/tutorials/how-to-handle-async-data-loading-lazy-loading-and-code-splitting-with-react
-// https://stackoverflow.com/questions/59572173/flash-of-unstyled-content-fouc-when-using-gatsby-with-emotion
-
-
-
 // REACT
 import React, { FC, useEffect, useState } from "react";
 // GATSBY
@@ -20,12 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
 // APP
 import { RenderHome } from "./../render/hr.tsx"
 import { Layout, SEO } from "../components/hc.tsx";
-// import { useContext } from "react"
-// import { RegionContext } from "../context"
 import { useNode } from "../utils/hu.tsx";
-
-// Try to add meta to disable auto translate from safari and google
-// https://medium.com/yellowcode/how-to-do-meta-tags-in-gatsbyjs-45245dc68ab9
 
 const IndexPage: FC<PageProps> = () => {
   return (
@@ -38,9 +25,6 @@ const IndexPage: FC<PageProps> = () => {
 }
 
 export default IndexPage
-
-// export const Head: HeadFC = () => <title>SanaConsult</title>
-
 
 export const Head = () => {
   const data = useStaticQuery(
@@ -71,7 +55,6 @@ export const Head = () => {
     setLanguage(detectedLanguage);
   }, []);
 
-  // const { lang } = useContext(RegionContext);
   // ici nous passons "language" à la place "lang" venant du RegionContext
   const {frontmatter } = useNode(data, language);
 
