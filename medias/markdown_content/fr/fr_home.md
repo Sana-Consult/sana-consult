@@ -1,9 +1,9 @@
 ---
 menu: "home"
 title: "SanaConsult"
-subtitle: "Avec SanaConsult, optimisez les performances de votre cabinet en grâce à notre expertise unique et offrez une expérience unique à votre équipe et vos patients"
+subtitle: "Avec SanaConsult, optimisez les performances de votre cabinet grâce à notre expertise unique et offrez une expérience unique à votre équipe et vos patients"
 categorie: "home"
-message: "Un besoin"
+message: "Un besoin ?"
 misc: "Parlez nous de votre projet"
 lang: "fr"
 description: ""
