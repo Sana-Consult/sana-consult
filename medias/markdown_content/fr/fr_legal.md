@@ -25,7 +25,7 @@ Pour toute réclamation relative aux données personnelles, veuillez-vous adress
 &nbsp;
 **Github BV - France**
 - 95, rue de la Boétie – Paris 75008 
-**Netlify inc **
+**Netlify inc**
 - 44 Montgomery Street Suite 300  - San Francisco, CA 94104
 \
 &nbsp;
@@ -97,15 +97,15 @@ Enfin, nous pouvons être amenés à transmettre des données pour se conformer 
 Nous mettons en place les mesures techniques et organisationnelles appropriées pour protéger au mieux vos Données Personnelles.
 En cas de violation de sécurité, nous vous informerons (ainsi que la CNIL) dès que possible en cas de risque élevé pour vos données.
  
-Comment exercer vos droits sur vos données ?
+**Comment exercer vos droits sur vos données ?**
 Conformément à la réglementation en vigueur, les Utilisateurs disposent des droits suivants :
-–        Droit d’accès : connaître Vos données traitées
-–        Droit de rectification : demander modification des données inexactes ou incomplètes
-–        Droit de suppression : effacement de Vos données, sous réserve de nos obligations légales de conservation
-–        Droit de retrait de consentement
-–        Droit de limitation
-–        Droit d’opposition
-–        Droit à la portabilité de vos données dans un format structuré
+- Droit d’accès : connaître Vos données traitées
+- Droit de rectification : demander modification des données inexactes ou incomplètes
+- Droit de suppression : effacement de Vos données, sous réserve de nos obligations légales de conservation
+- Droit de retrait de consentement
+- Droit de limitation
+- Droit d’opposition
+- Droit à la portabilité de vos données dans un format structuré
 Pour exercer vos droits, vous pouvez nous écrire au 481 rue du 8 mai 1945 – 38500 Coublevie, et l’adresse e-mail contact@sanaconsult.com.
 En fonction de la demande, une copie de pièce d’identité peut être demandée.
 En cas de non-satisfaction, une plainte peut être déposée directement auprès de la CNIL (https://www.cnil.fr/fr/plaintes).

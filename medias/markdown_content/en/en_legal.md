@@ -90,7 +90,7 @@ Finally, we may need to transmit data in order to comply with any legal or judic
 We implement appropriate technical and organisational measures to protect your Personal Data as effectively as possible.
 In the event of a security breach, we will inform you (and the CNIL) as soon as possible if there is a high risk to your data.
  
-How can you exercise your rights to your data?
+**How can you exercise your rights to your data?**
 In accordance with current regulations, Users have the following rights:               
 - Right of access: to know what data is being processed
 - Right of rectification: to request amendment of inaccurate or incomplete data

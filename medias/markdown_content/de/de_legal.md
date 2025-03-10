@@ -97,7 +97,7 @@ Schließlich kann es sein, dass wir Daten weitergeben müssen, um gerichtlichen 
 Wir setzen geeignete technische und organisatorische Maßnahmen ein, um Ihre Persönlichen Daten bestmöglich zu schützen.
 Im Falle einer Sicherheitsverletzung werden wir Sie (und die CNIL) so schnell wie möglich informieren, wenn ein hohes Risiko für Ihre Daten besteht.
  
-Wie können Sie Ihre Rechte in Bezug auf Ihre Daten ausüben?
+**Wie können Sie Ihre Rechte in Bezug auf Ihre Daten ausüben?**
 Gemäß den geltenden Vorschriften haben die Nutzerinnen und Nutzer die folgenden Rechte:
 - Recht auf Zugang: Ihre verarbeiteten Daten kennenlernen.
 - Recht auf Berichtigung: Änderung unrichtiger oder unvollständiger Daten verlangen.
