@@ -7,7 +7,7 @@ lang: "en"
 description: ""
 seo: "Legal notice and terms of use for SanaConsult"
 ---
-**Presentation of the website
+**Presentation of the website**
 The www.sanaconsult.com website is published by SANACONSULT, a limited liability company with capital of €1,000 under number 983 021 262.
 SANACONSULT's head office is located at 481 rue du 8 mai 1945 - 38500 Coublevie - France.
 The publication director is Céline REIBEL GRUBER and can be contacted at: contact@sanaconsult.com
@@ -20,12 +20,12 @@ For any complaints relating to personal data, please contact contact@sanaconsult
 **Gandi SAS**
 - 63-65 boulevard Masséna - Paris 75013 - France
 
-**The site is hosted by ****
+**The site is hosted by**
 \
 &nbsp;
 **Github BV - France**
 - 95, rue de la Boétie - Paris 75008 - France 
-**Netlify inc **
+**Netlify inc**
 - 44 Montgomery Street Suite 300 - San Francisco, CA 94104
 \
 &nbsp;
@@ -44,7 +44,7 @@ SANACONSULT cannot be held responsible for direct or indirect damage caused to t
 Any dispute relating to the use of the www.sanaconsult.com website is subject to French law.
 
 **CONFIDENTIALITY POLICY**
-We are committed to respecting and protecting the confidentiality of our users and we wish to be transparent with regard to the use of personal data.
+- We are committed to respecting and protecting the confidentiality of our users and we wish to be transparent with regard to the use of personal data.
 This Privacy Policy explains how the SANACONSULT website (hereinafter referred to as ‘We’ or ‘Us’) treats the data of Users (hereinafter referred to as ‘You’).
 We may change our privacy policy to comply with technical or legal developments.
 \
@@ -53,7 +53,7 @@ We may change our privacy policy to comply with technical or legal developments.
 **Who we are?**
 SANACONSULT, Sarl, registered in the Grenoble Trade and Companies Register under number 983 021 262, with its registered office at 481 rue du 8 mai 1945-38500 Coublevie.
 \
-\&nbsp;
+&nbsp;
 **How is your personal data collected?**
 Personal data is collected and/or processed at various times, in particular :
 - When you interact with our site via cookies that we store for a period of time on your computer or mobile device. You can control the use of cookies in your browser. If you refuse cookies, you can still use our websites, but your ability to use certain features may be limited.
@@ -71,8 +71,7 @@ Some data is necessary for the use of the Service, which we would be unable to p
 Aware of the importance of protecting personal data, we limit their use to what is necessary to provide the best service.
 In particular, we process your personal data for the following reasons:
 - SANACONSULT's legitimate interest in responding to your requests via the contact form, and ensuring the best quality and security of its Services
-- The pre-contractual relationship in the event of a request for information with a view to entering into a contract with SANACONSULT;
-\
+- The pre-contractual relationship in the event of a request for information with a view to entering into a contract with SANACONSULT.
 &nbsp;
 **How long is the data kept?**
 The data processed is kept for a period which depends on the purpose of your request via the contact form.
@@ -86,7 +85,6 @@ Access to personal data is limited to SANACONSULT teams who have to process your
 The data processed is not passed on to any commercial or advertising entity, except in the event of an express request on your part.
 Personal Data may be processed by subcontractors, for example for hosting, authentication, or statistical analysis, as well as for the proper operation of our site, in compliance with the principles of this Privacy Policy.
 Finally, we may need to transmit data in order to comply with any legal or judicial request, as well as in the context of company operations such as restructuring or acquisition.               
-\
 &nbsp;
 **How your data is secured?**
 We implement appropriate technical and organisational measures to protect your Personal Data as effectively as possible.

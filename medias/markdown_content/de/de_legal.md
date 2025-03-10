@@ -12,7 +12,7 @@ Die Website www.sanaconsult.com wird von der Gesellschaft SANACONSULT, SARLU mit
 Der Hauptsitz der Firma SANACONSULT befindet sich in 481 rue du 8 mai 1945 - 38500 Coublevie.
 Die Leiterin der Veröffentlichung ist Céline REIBEL GRUBER und kann kontaktiert werden: contact@sanaconsult.com
 Mitwirkende der Website :
-Für Beschwerden bezüglich personenbezogener Daten wenden Sie sich bitte an contact@sanaconsult.com.
+Für Beschwerden bezüglich personenbezogener Daten wenden Sie sich bitte an contact@sanaconsult.com
 
 **Der Domainname wird von der Firma verwaltet.**
 \
@@ -23,7 +23,7 @@ Für Beschwerden bezüglich personenbezogener Daten wenden Sie sich bitte an con
 **Die Website wird von den Unternehmen**
 \
 &nbsp;
-**Github BV - Frankreich**.
+**Github BV - Frankreich**
 - 95, rue de la Boétie - Paris 75008 
 **Netlify inc**
 - 44 Montgomery Street Suite 300 - San Francisco, CA 94104
@@ -49,7 +49,7 @@ SANACONSULT verpflichtet sich, die Website so gut wie möglich zu sichern, kann 
 Alle Streitigkeiten im Zusammenhang mit der Nutzung der Website www.sanaconsult.com unterliegen dem französischen Recht.
 
 **DATENSCHUTZRICHTLINIE**
-Wir legen Wert auf die Achtung und den Schutz der Privatsphäre unserer Nutzer und möchten transparent machen, wie wir personenbezogene Daten verwenden.
+- Wir legen Wert auf die Achtung und den Schutz der Privatsphäre unserer Nutzer und möchten transparent machen, wie wir personenbezogene Daten verwenden.
 Im Folgenden informieren wir Sie darüber, wie die SANACONSULT-Website (im Folgenden „Wir“) die Daten der Nutzer (im Folgenden „Sie“) verarbeitet.
 Wir können unsere Datenschutzrichtlinie ändern, um technischen oder rechtlichen Entwicklungen gerecht zu werden.
 \
@@ -66,17 +66,17 @@ Personenbezogene Daten werden zu verschiedenen Zeitpunkten gesammelt und/oder ve
 - Wenn Sie uns per E-Mail oder über unser Kontaktformular kontaktieren.
 \
 &nbsp;
-**Welche persönlichen Daten werden von SANACONSULT gesammelt und/oder verarbeitet?**.
+**Welche persönlichen Daten werden von SANACONSULT gesammelt und/oder verarbeitet?**
 Die Website SANACONSULT kann insbesondere die folgenden Daten verarbeiten:
 - Ihr Vor- und Nachname, Telefonnummer, E-Mail-Adresse, um Sie nach Ihrer Anfrage zu kontaktieren;
 - Die Daten, die Sie über unsere Kontaktformulare austauschen.
 Bestimmte Daten sind für die Nutzung des Dienstes erforderlich, die wir im Falle einer Ablehnung der Verarbeitung nicht gewährleisten können.
 &nbsp;               
-**Warum werden diese persönlichen Daten von SANACONSULT angefordert und verarbeitet?
+**Warum werden diese persönlichen Daten von SANACONSULT angefordert und verarbeitet?**
 Da wir uns der Herausforderungen des Schutzes personenbezogener Daten bewusst sind, beschränken wir ihre Verwendung auf das, was notwendig ist, um den besten Service zu gewährleisten.
 Insbesondere verarbeiten wir Ihre personenbezogenen Daten aus den folgenden Gründen:
 - Das legitime Interesse von SANACONSULT, auf Ihre Anfragen über das Kontaktformular zu antworten und die höchste Qualität und Sicherheit seiner Dienstleistungen zu gewährleisten.
-- Die vorvertragliche Beziehung im Falle von Informationsanfragen im Hinblick auf einen Vertrag mit SANACONSULT;
+- Die vorvertragliche Beziehung im Falle von Informationsanfragen im Hinblick auf einen Vertrag mit SANACONSULT.
 \
 &nbsp;
 **Wie lange werden die Daten gespeichert?**

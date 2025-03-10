@@ -49,7 +49,7 @@ SANACONSULT s’engage à sécuriser au mieux le site, cependant sa responsabili
 Tout litige en relation avec l’utilisation du site www.sanaconsult.com est soumis au droit français.
 
 **POLTIQUE DE CONFIDENTIALITÉ**
-Nous sommes attachés au respect et à la protection de la confidentialité de nos utilisateurs et nous souhaitons être transparents quant à l’utilisation des données personnelles.
+- Nous sommes attachés au respect et à la protection de la confidentialité de nos utilisateurs et nous souhaitons être transparents quant à l’utilisation des données personnelles.
 Dans la présente nous vous indiquons comment le site SANACONSULT (ci-après « Nous ») traite les données des Utilisateurs (ci-après « Vous »).
 Nous sommes susceptibles de modifier notre politique de confidentialité afin de se conformer à toute évolution technique ou légale.
 \
@@ -76,7 +76,7 @@ Certaines données sont nécessaires à l’utilisation du Service que nous ne p
 Conscients des enjeux de protection des données personnelles, nous limitons leur utilisation à ce qui est nécessaire pour assurer le meilleur service.
 Nous traitons notamment vos données personnelles pour les raisons suivantes :
 •	L’intérêt légitime de SANACONSULT à répondre à vos demandes via le formulaire de contact, et assurer la meilleure qualité et sécurité de ses Services
-•	La relation pré-contractuelle en cas de demande d’informations en vue de contracter avec SANACONSULT;
+•	La relation pré-contractuelle en cas de demande d’informations en vue de contracter avec SANACONSULT.
 \
 &nbsp;
 **Combien de temps les données sont-elles conservées ?**
