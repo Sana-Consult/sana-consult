@@ -1,7 +1,7 @@
 /**
  * MENU HEADER CONTENT
- * 2023-2024
- * V 0.1.0
+ * 2023-2026
+ * V 0.1.1
  */
 
 // REACT
@@ -165,7 +165,7 @@ const RenderMenuBig: FC<PropsMenuRender> =({className_box, style_box, box, cell,
 			<GoHome style_box={box} style_cell={cell}/>
 			<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 			<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
-			<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+			{/* <NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox> */}
 			<NavCellBox to="/client" style_box={box} style_cell={cell}>{tree[lang].customer}</NavCellBox>
 		</div>
 		<DropdownRegionsBig/>
@@ -179,7 +179,7 @@ const RenderMenuSmall: FC<PropsMenuRender> =({className_box, style_box, box, cel
 	return <Box className={className_box} style={style_box}>
 		<NavCellBox to="/about" style_box={box} style_cell={cell}>{tree[lang].about}</NavCellBox>
 		<NavCellBox to="/support" style_box={box} style_cell={cell}>{tree[lang].support}</NavCellBox>
-		<NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox>
+		{/* <NavCellBox to="/contact" style_box={box} style_cell={cell}>{tree[lang].contact}</NavCellBox> */}
 		<NavCellBox to="/client" style_box={box} style_cell={cell}>{tree[lang].customer}</NavCellBox>
 
 		{/* offset={(height_header) * 0.75 + "px" cette phrase n'est pas très propre comme code */}
